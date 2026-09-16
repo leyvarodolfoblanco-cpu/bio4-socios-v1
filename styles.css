@@ -3,3 +3,5 @@
 .user-button{min-width:0;max-width:55%;overflow-wrap:anywhere}.avatar{flex-shrink:0}.tag{overflow-wrap:anywhere}.copy-box{overflow-wrap:anywhere}@media(max-width:360px){.products-grid{grid-template-columns:1fr}.topbar .eyebrow{max-width:130px}}
 
 .hero-chat .eyebrow{color:#526b39}
+
+.benefits-list{margin:10px 0 6px;padding-left:20px}.benefits-list li{margin-bottom:6px;line-height:1.4}
