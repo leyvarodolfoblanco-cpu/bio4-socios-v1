@@ -1,4 +1,5 @@
-// Curated cosmetic copy only. This is an editorial scope, not Meta approval.
+// Drafts for the webapp. None of these texts is a WhatsApp/Meta approval.
+import {reviewedDrafts} from './share-drafts.js';
 export const shareProfiles = {
   'B4-SHII-MANOS-01': ['Un detalle para tu rutina de cuidado de manos.', 'Manos suaves: un pequeño detalle en tu rutina diaria.', 'MANOS'],
   'B4-SHII-SEDA-01': ['Un espacio para el cuidado corporal en tu día.', 'Dale un momento de cuidado a tu piel.', 'SEDA'],
@@ -11,7 +12,7 @@ export const shareProfiles = {
   'B4-GANOSOAP-01': ['Conoce Gano Soap en su presentación de tres barras.', 'Tu rutina de limpieza, con ganoderma y glicerina.', 'JABON']
 };
 export const shareStages = [
-  ['catalogo','Catálogo WhatsApp','Descripción estable: presentación, beneficio cosmético, ingredientes y precio.'],
+  ['catalogo','Catálogo WhatsApp','Descripción estable: presentación, ingredientes confirmados y precio.'],
   ['interes','Estado de WhatsApp','Breve, claro y con una sola invitación a responder.'],
   ['informacion','Chat de WhatsApp','Para responder a alguien que pidió información.'],
   ['precio','Responder precio','Da el precio con claridad; confirma entrega y total aparte.'],
@@ -33,17 +34,17 @@ export const cosmeticFacts = {
 };
 export function shareFacts(p){const f=cosmeticFacts[p.id];if(!sharingEligibility(p).enabled||!f)return '';return `✨ Según el catálogo del fabricante: ${f.benefit}${f.ingredients.length?'\n🔎 Ingredientes destacados: '+f.ingredients.join(', ')+'.':''}`;}
 export function sharingEligibility(p) {
-  if (p.category === 'CUIDADO PERSONAL' && shareProfiles[p.id]) return {enabled:true,reason:'Textos de uso cosmético, sin afirmaciones terapéuticas. Revisa la etiqueta y las reglas aplicables antes de publicar; esto no representa una aprobación de WhatsApp.'};
-  return {enabled:false,reason:p.category==='SUPLEMENTOS'
-    ? 'No generamos promoción de este suplemento para WhatsApp. Requiere revisar su clasificación frente a las restricciones sobre productos médicos y sanitarios. Cambiar las palabras o añadir un aviso no elimina una restricción del producto.'
-    : 'Este producto requiere una revisión individual antes de preparar promoción para WhatsApp. Por ahora puedes consultar su ficha en Aprender.'};
+  if (p?.category === 'CUIDADO PERSONAL' && shareProfiles[p.id]) return {enabled:true,reason:'Borrador de uso cosmético. Revisa la etiqueta y las reglas aplicables antes de publicar; esto no representa una aprobación de WhatsApp.'};
+  if (p?.id && reviewedDrafts[p.id]) return {enabled:true,reason:'Borrador informativo para socios. No acredita que el producto ni la actividad de la cuenta estén permitidos en WhatsApp Business. Confirma las reglas aplicables antes de publicar o enviar.'};
+  return {enabled:false,reason:'No hay texto preparado para este producto. Consulta su ficha antes de compartir.'};
 }
 export function makeShareCopy(p,stage='interes',variant='A') {
   if (!sharingEligibility(p).enabled) return '';
+  if (reviewedDrafts[p.id]?.[stage]?.[variant]) return reviewedDrafts[p.id][stage][variant];
   const profile=shareProfiles[p.id];
   const identity=`${p.name} · ${p.presentation}`;
   const price=p.price===null?'Precio de esta presentación por confirmar.':`Precio público: ${new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(p.price)} MXN.`;
-  const invitation=variant==='B'?'¿Prefieres conocer los ingredientes o las opciones de entrega?':`Responde ${profile[2]} y te comparto la información de la etiqueta.`;
+  const invitation=variant==='B'?'¿Prefieres conocer los ingredientes o las opciones de entrega?':`Responde ${profile?.[2]||'INFO'} y revisamos la información del producto.`;
   if(stage==='catalogo'&&variant==='A')return `🧴 ${identity}\n✨ ${cosmeticFacts[p.id].benefit}\n💰 ${price}\nConsulta la etiqueta para conocer los ingredientes y las indicaciones. Disponibilidad y entrega por confirmar.`;
   if(stage==='catalogo'&&variant==='B')return `🧴 ${identity}\n${shareFacts(p)}\n💰 ${price}\nConsulta la etiqueta para la composición completa. Disponibilidad y entrega por confirmar.`;
   if(stage==='interes'&&variant==='A')return `✨ ${identity}\n💰 ${price}\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.`;
@@ -61,7 +62,7 @@ export function shareTextIssues(text) {
   if(!text.trim())issues.push('Escribe un mensaje antes de copiar.');
   if(/\b(cura|curar|trata|tratar|previene|prevenir|diabetes|cancer|artritis|regeneracion|regenera|hormonal|metabolic[oa]|detox|adelgaza|baja de peso|adaptogen[oa]s?)\b/.test(n))issues.push('Revisa las afirmaciones de salud: usa datos de etiqueta y evita promesas terapéuticas. No atribuyas efectos adaptógenos a una fórmula por contener hongos.');
   if(/garantiz|sin riesgo|100\s*%|milagro|ultimas piezas|solo hoy|resultado.*asegur|ingreso.*asegur/.test(n))issues.push('Revisa las garantías y la urgencia: no publiques resultados o escasez sin respaldo.');
-  if(/\b(natural|ecologico|biodegradable)\b/.test(n))issues.push('Comprueba cualquier afirmación ambiental o de origen en la documentación del producto.');
+  if(/\b(100\s*%\s*natural|producto\s+natural|origen\s+natural|ecologic[oa]|biodegradable)\b/.test(n))issues.push('Comprueba cualquier afirmación ambiental o de origen en la documentación del producto.');
   return issues;
 }
 export function summarizeShareResults(events,productId,now=Date.now()) {
