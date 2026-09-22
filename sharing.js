@@ -11,8 +11,9 @@ export const shareProfiles = {
   'B4-GANOSOAP-01': ['Conoce Gano Soap en su presentación de tres barras.', 'Tu rutina de limpieza, con ganoderma y glicerina.', 'JABON']
 };
 export const shareStages = [
-  ['interes','Generar interés','Estado: una idea breve y una invitación a responder.'],
-  ['informacion','Explicar el producto','Para responder a alguien que pidió información.'],
+  ['catalogo','Catálogo WhatsApp','Descripción estable: presentación, beneficio cosmético, ingredientes y precio.'],
+  ['interes','Estado de WhatsApp','Breve, claro y con una sola invitación a responder.'],
+  ['informacion','Chat de WhatsApp','Para responder a alguien que pidió información.'],
   ['precio','Responder precio','Da el precio con claridad; confirma entrega y total aparte.'],
   ['pedido','Avanzar al pedido','Solo cuando la persona ya mostró interés en comprar.'],
   ['seguimiento','Retomar con permiso','Úsalo únicamente si acordaron este seguimiento.']
@@ -43,6 +44,8 @@ export function makeShareCopy(p,stage='interes',variant='A') {
   const identity=`${p.name} · ${p.presentation}`;
   const price=p.price===null?'Precio de esta presentación por confirmar.':`Precio público: ${new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(p.price)} MXN.`;
   const invitation=variant==='B'?'¿Prefieres conocer los ingredientes o las opciones de entrega?':`Responde ${profile[2]} y te comparto la información de la etiqueta.`;
+  if(stage==='catalogo'&&variant==='A')return `🧴 ${identity}\n✨ ${cosmeticFacts[p.id].benefit}\n💰 ${price}\nConsulta la etiqueta para conocer los ingredientes y las indicaciones. Disponibilidad y entrega por confirmar.`;
+  if(stage==='catalogo'&&variant==='B')return `🧴 ${identity}\n${shareFacts(p)}\n💰 ${price}\nConsulta la etiqueta para la composición completa. Disponibilidad y entrega por confirmar.`;
   if(stage==='interes'&&variant==='A')return `✨ ${identity}\n💰 ${price}\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.`;
   if(stage==='informacion'&&variant==='A')return `✨ Te comparto la información de ${p.name}.\n📦 Presentación: ${p.presentation}.\n💰 ${price}\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.`;
   if(stage==='interes')return `${profile[variant==='B'?1:0]}\n\n${identity}\n${shareFacts(p)}\n💰 ${price}\n\n💬 ${invitation}`;
