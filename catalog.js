@@ -991,7 +991,6 @@ export const products=[
     "ingredients": null,
     "image": null,
     "benefits": [
-      "Protección de rayos UV.",
       "Antioxidante.",
       "Hipoalergénico.",
       "Mejor circulación."
