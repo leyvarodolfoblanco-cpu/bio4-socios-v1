@@ -89,12 +89,10 @@ export const products=[
     "ingredients": "Ganoderma lucidum, Dioscorea villosa (wild yam).",
     "image": "assets/B4-BIOEN-01.png",
     "benefits": [
-      "Contribuye al equilibrio hormonal natural del organismo.",
       "Mejor circulación.",
       "Mejor estado de ánimo.",
       "Estabilidad metabólica.",
-      "Aumento de fuerza y tono muscular.",
-      "Apoya el bienestar en las etapas de cambio hormonal propias de la edad adulta."
+      "Aumento de fuerza y tono muscular."
     ]
   },
   {
@@ -188,8 +186,6 @@ export const products=[
     "ingredients": "Saw palmetto, ginseng panax, uña de gato, Ganoderma lucidum, hongo Eryngii, ginkgo biloba, damiana.",
     "image": "assets/B4-TODAY-01.png",
     "benefits": [
-      "Bienestar íntimo general.",
-      "Protección de tejidos.",
       "Antioxidante.",
       "Apoya la vitalidad y la energía.",
       "Mayor energía."
@@ -491,7 +487,6 @@ export const products=[
     "benefits": [
       "Mayor hidratación.",
       "Hipoalergénico.",
-      "Contribuye al equilibrio hormonal natural del organismo.",
       "Relajación.",
       "Limpieza.",
       "Cuidado de la piel."
@@ -568,7 +563,6 @@ export const products=[
     "ingredients": "Ganoderma lucidum.",
     "image": "assets/B4-GANOSUN-01.png",
     "benefits": [
-      "Protección de rayos UV.",
       "Antioxidante.",
       "Hipoalergénico.",
       "Mejor circulación."
@@ -787,8 +781,6 @@ export const products=[
     "ingredients": null,
     "image": null,
     "benefits": [
-      "Ahorro de combustible.",
-      "Mantenimiento de la vida del motor.",
       "Fácil instalación."
     ]
   },
