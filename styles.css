@@ -5,3 +5,4 @@
 .hero-chat .eyebrow{color:#526b39}
 
 .benefits-list{margin:10px 0 6px;padding-left:20px}.benefits-list li{margin-bottom:6px;line-height:1.4}
+.image-actions{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 8px}.media-heading{margin:28px 0 12px}.media-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.media-card{margin:0;min-width:0}.media-card img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;border:1px solid var(--line)}.media-card figcaption{display:grid;gap:6px;padding-top:7px}.media-card strong{font-size:12px}.media-card .btn{font-size:12px;padding:7px 5px;min-height:38px;text-align:center}.media-card .btn.ghost{min-height:32px}@media(max-width:700px){.media-grid{grid-template-columns:1fr;gap:20px}.media-card strong{font-size:15px}.media-card .btn{font-size:14px;min-height:44px}.media-card img{object-fit:contain}}
