@@ -971,7 +971,7 @@ export const products=[
     "name": "Ceutica4 Natural",
     "category": "SUPLEMENTOS",
     "presentation": "500 g, sabor natural",
-    "price": null,
+    "price": 1299,
     "ingredients": null,
     "image": "assets/B4-CEUTICA4-01.png",
     "benefits": [

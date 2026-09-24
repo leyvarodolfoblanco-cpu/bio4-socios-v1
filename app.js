@@ -1,7 +1,7 @@
-import {products} from './catalog.js?v=compartir-todos-20260922';
+import {products} from './catalog.js?v=precio-ceutica-20260924';
 import {objections,closings,lessons,scenarios,topics,difficulties,dimensions} from './content.js';
 import {evaluate,prospectReply,roundCount,sampleExam,shouldFinish} from './engine.js';
-import {makeShareCopy,sharingEligibility,shareStages,shareTextIssues,summarizeShareResults} from './sharing.js?v=compartir-todos-20260922';
+import {makeShareCopy,sharingEligibility,shareStages,shareTextIssues,summarizeShareResults} from './sharing.js?v=precio-ceutica-20260924';
 import {productMedia} from './media.js?v=galeria-20260924';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

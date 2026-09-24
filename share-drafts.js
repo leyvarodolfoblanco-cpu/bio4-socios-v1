@@ -311,16 +311,16 @@ export const reviewedDrafts = {
   },
   "B4-CEUTICA4-01": {
     "catalogo": {
-      "A": "📦 Ceutica4 Natural · 500 g, sabor natural\n💰 Precio por confirmar.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 Ceutica4 Natural · 500 g, sabor natural\n🔎 Composición de esta presentación por confirmar.\n💰 Precio por confirmar.\nConfirma disponibilidad y entrega antes del pedido."
+      "A": "📦 Ceutica4 Natural · 500 g, sabor natural\n💰 Precio público: $1,299 MXN.\nDisponibilidad y costo de entrega por confirmar.",
+      "B": "📦 Ceutica4 Natural · 500 g, sabor natural\n🔎 Composición de esta presentación por confirmar.\n💰 Precio público: $1,299 MXN.\nConfirma disponibilidad y entrega antes del pedido."
     },
     "interes": {
-      "A": "✨ Ceutica4 Natural · 500 g, sabor natural\n💰 Precio por confirmar.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "✨ Ceutica4 Natural\n📦 500 g, sabor natural\n💰 Precio por confirmar.\n💬 ¿Quieres conocer los detalles de esta presentación? Escríbeme."
+      "A": "✨ Ceutica4 Natural · 500 g, sabor natural\n💰 Precio público: $1,299 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
+      "B": "✨ Ceutica4 Natural\n📦 500 g, sabor natural\n💰 Precio público: $1,299 MXN.\n💬 ¿Quieres conocer los detalles de esta presentación? Escríbeme."
     },
     "informacion": {
-      "A": "✨ Te comparto la información de Ceutica4 Natural.\n📦 Presentación: 500 g, sabor natural.\n💰 Precio por confirmar.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Te comparto lo confirmado de Ceutica4 Natural.\n📦 500 g, sabor natural\n💰 Precio por confirmar.\n💬 ¿Quieres que confirme características, disponibilidad y entrega?"
+      "A": "✨ Te comparto la información de Ceutica4 Natural.\n📦 Presentación: 500 g, sabor natural.\n💰 Precio público: $1,299 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
+      "B": "¡Claro! 😊 Te comparto lo confirmado de Ceutica4 Natural.\n📦 500 g, sabor natural\n💰 Precio público: $1,299 MXN.\n💬 ¿Quieres que confirme características, disponibilidad y entrega?"
     }
   },
   "B4-SATTVA-01": {

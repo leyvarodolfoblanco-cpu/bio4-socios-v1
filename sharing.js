@@ -1,5 +1,5 @@
 // Drafts for the webapp. None of these texts is a WhatsApp/Meta approval.
-import {reviewedDrafts} from './share-drafts.js';
+import {reviewedDrafts} from './share-drafts.js?v=precio-ceutica-20260924';
 export const shareProfiles = {
   'B4-SHII-MANOS-01': ['Un detalle para tu rutina de cuidado de manos.', 'Manos suaves: un pequeño detalle en tu rutina diaria.', 'MANOS'],
   'B4-SHII-SEDA-01': ['Un espacio para el cuidado corporal en tu día.', 'Dale un momento de cuidado a tu piel.', 'SEDA'],
