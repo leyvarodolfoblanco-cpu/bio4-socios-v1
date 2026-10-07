@@ -32,13 +32,66 @@ export const cosmeticFacts = {
   'B4-COLAGENO-FACIAL-01': {benefit:'Humectación para el cuidado facial.',ingredients:['Colágeno hidrolizado','Ganoderma lucidum','Ácido hialurónico']},
   'B4-GANOSOAP-01': {benefit:'Limpieza y humectación.',ingredients:['Ganoderma lucidum','Glicerina']}
 };
+// Copy-ready highlights are limited to descriptive facts and modest everyday
+// uses already present in the public catalog. Health claims are not inferred
+// from an ingredient or from a product's name.
+const everydayHighlights = {
+  'B4-GANODENT-01':'Una opción para tu rutina de limpieza bucal.',
+  'B4-LADOUCHE-01':'Limpieza y cuidado diario de la piel.',
+  'B4-LADOUCHE-02':'Limpieza confortable para el cuidado íntimo.',
+  'B4-4BELLE-01':'Hidratación para tu rutina de cuidado facial.',
+  'B4-GANOSUN-01':'Una opción para tu rutina de cuidado de la piel.',
+  'B4-GANOSUN-02':'Una presentación en sobres para conocer Gano Sun.',
+  'B4-SHII-TOMILLO-01':'Una opción para acompañar tu rutina de masaje.',
+  'B4-4DXT-KUUL-01':'Sensación refrescante al aplicar.',
+  'B4-MINICABINA-01':'Varios productos Bio4 reunidos en un estuche.',
+  'B4-BIOCRISTAL-01':'Elaborado con cristal mineral de origen natural.',
+  'B4-BIOCRISTAL-02':'Repuesto de 250 ml para Bio Cristal.',
+  'B4-BIOCLEAN-01':'Una opción para la limpieza de manchas difíciles.',
+  'B4-4SAVE-01':'Diseño compacto para uso doméstico.',
+  'B4-AHORRADOR-GASOLINA-01':'Fácil instalación.',
+  'B4-COSMETIQUERA-01':'Organiza y transporta tus productos Bio4.',
+  'B4-KIT-INICIO-01':'Materiales para dar tus primeros pasos como socio.',
+  'B4-CATALOGO-01':'Muestra los productos y presentaciones de Bio4.',
+  'B4-REVISTA-01':'Información técnica para consultar con calma.',
+  'B4-FICHAS-01':'Datos de productos para consulta rápida.',
+  'B4-PEDIDOS-01':'Organiza tus pedidos en un solo lugar.',
+  'B4-NOTAS-VENTA-01':'Registra los datos de cada venta.',
+  'B4-MANUAL-SECUENCIA-01':'Una guía para preparar tus conversaciones.',
+  'B4-BOLSA-ECO-01':'Bolsa reutilizable para tus entregas.',
+  'B4-BOLSA-ECO-02':'Bolsa reutilizable para pedidos más grandes.',
+  'B4-SHAKER-BIO4-01':'Prepara tus productos Bio4 donde estés.',
+  'B4-SHAKER-4DXT-01':'Un shaker para tu rutina con la línea 4DXT.',
+  'B4-VASO-KENKO-01':'Un vaso para disfrutar Kenko Café.',
+  'B4-PROTECTOR-VASO-01':'Protege la mano del calor del vaso.'
+};
+export function shareSpotlight(p) {
+  const cosmetic=cosmeticFacts[p.id];
+  if(cosmetic)return {label:'Beneficio de uso',text:cosmetic.benefit.replace(/\.$/,'')};
+  if(everydayHighlights[p.id])return {label:'Lo que destaca',text:everydayHighlights[p.id].replace(/\.$/,'')};
+  const reviewed=reviewedDrafts[p.id]?.catalogo?.B||'';
+  const match=reviewed.match(/🔎 Ingredientes destacados(?: del catálogo)?:\s*([^\n]+)/);
+  if(match)return {label:'Ingredientes destacados',text:match[1].replace(/\.$/,'')};
+  return {label:'Presentación',text:p.presentation};
+}
+function addSpotlight(copy,p,stage,variant) {
+  if(!['catalogo','interes','informacion'].includes(stage))return copy;
+  const {label,text}=shareSpotlight(p);
+  // Detailed B drafts already name the ingredients. Keep them intact unless
+  // there is a distinct everyday benefit to show.
+  if(variant==='B'&&label==='Ingredientes destacados')return copy;
+  if(copy.toLocaleLowerCase('es-MX').includes(text.toLocaleLowerCase('es-MX')))return copy;
+  const lines=copy.split('\n');
+  lines.splice(1,0,`🌟 ${label}: ${text}.`);
+  return lines.join('\n');
+}
 export function shareFacts(p){const f=cosmeticFacts[p.id];if(!sharingEligibility(p).enabled||!f)return '';return `✨ Según el catálogo del fabricante: ${f.benefit}${f.ingredients.length?'\n🔎 Ingredientes destacados: '+f.ingredients.join(', ')+'.':''}`;}
 export function sharingEligibility(p) {
   if (p?.category === 'CUIDADO PERSONAL' && shareProfiles[p.id]) return {enabled:true,reason:'Borrador de uso cosmético. Revisa la etiqueta y las reglas aplicables antes de publicar; esto no representa una aprobación de WhatsApp.'};
   if (p?.id && reviewedDrafts[p.id]) return {enabled:true,reason:'Borrador informativo para socios. No acredita que el producto ni la actividad de la cuenta estén permitidos en WhatsApp Business. Confirma las reglas aplicables antes de publicar o enviar.'};
   return {enabled:false,reason:'No hay texto preparado para este producto. Consulta su ficha antes de compartir.'};
 }
-export function makeShareCopy(p,stage='interes',variant='A') {
+function baseShareCopy(p,stage='interes',variant='A') {
   if (!sharingEligibility(p).enabled) return '';
   if (reviewedDrafts[p.id]?.[stage]?.[variant]) return reviewedDrafts[p.id][stage][variant];
   const profile=shareProfiles[p.id];
@@ -55,6 +108,10 @@ export function makeShareCopy(p,stage='interes',variant='A') {
   if(stage==='pedido')return `📦 ${identity}\n💰 ${price}\n\n💬 ${variant==='B'?'¿Revisamos disponibilidad y entrega antes de que decidas?':'¿Quieres que confirme disponibilidad, entrega y total para esta presentación?'} Te comparto los detalles antes de que confirmes. Si prefieres esperar, está bien.`;
   if(stage==='seguimiento')return `👋 Hola, retomo lo de ${p.name}, como acordamos.\n💬 ${variant==='B'?'¿Quedó alguna duda sobre la presentación o la entrega?':'¿Quieres revisar la información o prefieres dejarlo por ahora?'}\nSi ya no quieres seguimiento, dime y lo dejamos aquí.`;
   return '';
+}
+export function makeShareCopy(p,stage='interes',variant='A') {
+  const copy=baseShareCopy(p,stage,variant);
+  return copy?addSpotlight(copy,p,stage,variant):'';
 }
 export function shareTextIssues(text) {
   const n=text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
