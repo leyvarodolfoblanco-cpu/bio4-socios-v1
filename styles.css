@@ -26,6 +26,7 @@
 .product-presentation{font-size:14px;margin-bottom:0}
 .share-channels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:20px 0 14px}
 .share-channels .btn{width:100%;min-height:58px;border-radius:14px;box-shadow:0 3px 10px #173e3612;line-height:1.2}
+.share-channels .btn+.btn,.share-variants .btn+.btn{margin-left:0}
 .share-channels .btn:nth-child(1){background:#fff1e7;border-color:#e7aa70;color:#733812}
 .share-channels .btn:nth-child(2){background:#e9f3ff;border-color:#82b5e8;color:#164e7b}
 .share-channels .btn:nth-child(3){background:#e7f6ef;border-color:#79bda0;color:#15553b}
