@@ -6,3 +6,54 @@
 
 .benefits-list{margin:10px 0 6px;padding-left:20px}.benefits-list li{margin-bottom:6px;line-height:1.4}
 .image-actions{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 8px}.media-heading{margin:28px 0 12px}.media-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.media-card{margin:0;min-width:0}.media-card img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;border:1px solid var(--line)}.media-card figcaption{display:grid;gap:6px;padding-top:7px}.media-card strong{font-size:12px}.media-card .btn{font-size:12px;padding:7px 5px;min-height:38px;text-align:center}.media-card .btn.ghost{min-height:32px}@media(max-width:700px){.media-grid{grid-template-columns:1fr;gap:20px}.media-card strong{font-size:15px}.media-card .btn{font-size:14px;min-height:44px}.media-card img{object-fit:contain}}
+
+
+/* Navegación y acciones rápidas de la V1 móvil */
+.mobile-nav{display:none}
+.quick-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:-4px 0 22px}
+.quick-actions .btn{min-height:54px;text-align:center}
+.btn.quick-product{background:#155a77;border-color:#155a77;color:#fff}
+.btn.quick-share,.btn.share{background:#a44422;border-color:#a44422;color:#fff}
+.btn.quick-practice{background:#664583;border-color:#664583;color:#fff}
+.category-chips{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 20px}
+.category-chip{min-height:44px;border:1px solid #b9ccc1;border-radius:999px;padding:8px 15px;background:#fff;color:var(--green);font-weight:650}
+.category-chip.active{background:var(--green);border-color:var(--green);color:#fff}
+.category-chip:hover:not(.active){background:#eaf2eb}
+.results-count{font-size:14px}
+.product-actions{display:flex;gap:8px;margin-top:16px}
+.product-actions .btn{flex:1;font-size:14px;padding:10px 8px}
+.product .price{margin:12px 0 0}
+.product-presentation{font-size:14px;margin-bottom:0}
+.more-list{display:grid;gap:10px;max-width:760px}
+.more-item{display:grid;grid-template-columns:44px 1fr 22px;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;color:var(--green);text-decoration:none;min-height:76px}
+.more-item small{display:block;color:var(--muted);margin-top:4px;font-size:13px}
+.more-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#e9f1eb;font-size:22px}
+.more-item:hover{border-color:#87a698}
+@media(max-width:700px){
+  .sidebar{padding:15px 20px;border-bottom:1px solid var(--line)}
+  .sidebar nav{display:none}
+  .main{padding-bottom:calc(106px + env(safe-area-inset-bottom))}
+  .mobile-nav{position:fixed;z-index:12;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;background:#fff;border-top:1px solid var(--line);padding:7px 7px calc(7px + env(safe-area-inset-bottom));box-shadow:0 -5px 20px #123f3812}
+  .mobile-nav-link{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:0;min-height:56px;border-radius:10px;text-decoration:none;font-size:11px;font-weight:700;color:#416159}
+  .mobile-nav-link span:first-child{font-size:21px;line-height:1}
+  .mobile-nav-link.active{background:#e8f2e9;color:var(--green)}
+  .mobile-nav-link.share-link{color:#9b4022}
+  .mobile-nav-link.share-link.active{background:#fbece6;color:#843116}
+  .topbar{min-height:54px;margin-bottom:18px}
+  .quick-actions{grid-template-columns:1fr;gap:8px}
+  .quick-actions .btn{justify-content:flex-start;padding-left:18px}
+  .toolbar{margin:14px 0}
+  .toolbar .search{min-width:100%}
+  .category-chips{gap:7px}
+  .category-chip{font-size:13px;padding:8px 12px}
+  .products-grid{grid-template-columns:1fr}
+  .products-grid .product{display:grid;grid-template-columns:92px minmax(0,1fr);gap:13px;padding:12px}
+  .products-grid .product-img{height:100px;margin:0}
+  .products-grid .product-img img{max-height:100px}
+  .product-info{min-width:0}
+  .product-info h3{margin:5px 0;font-size:16px}
+  .product-info .tag{font-size:10px}
+  .product-info .price{font-size:17px;margin:7px 0 0}
+  .product-actions{grid-column:1/-1;margin-top:10px}
+  .product-actions .btn{min-height:44px;font-size:13px}
+}
