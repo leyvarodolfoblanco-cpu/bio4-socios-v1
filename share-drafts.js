@@ -3,30 +3,30 @@
 export const reviewedDrafts = {
   "B4-GANOCONGRUENCIA-01": {
     "catalogo": {
-      "A": "📦 Gano Congruencia · 30 sobres, 600 g\n💰 Precio público: $1,857 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 Gano Congruencia · 30 sobres, 600 g\n🌾 El catálogo Bio4 destaca linaza, inulina y amaranto, junto con Ganoderma lucidum y melena de león.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\nConfirma disponibilidad y condiciones antes de acordar el pedido."
+      "A": "📦 Gano Congruencia · 30 sobres, 600 g\n🌿 Reúne Bio.Con, Bio.Gru, Bio.Cia y Gano He en una fórmula 4 en 1.\n💰 Precio público: $1,857 MXN.\nDisponibilidad y costo de entrega por confirmar.",
+      "B": "📦 Gano Congruencia · 30 sobres, 600 g\n🌿 Fórmula 4 en 1: Bio.Con, Bio.Gru, Bio.Cia y Gano He.\n🌾 El catálogo Bio4 destaca linaza, inulina y amaranto, junto con Ganoderma lucidum y melena de león.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\nConfirma disponibilidad y condiciones antes de acordar el pedido."
     },
     "interes": {
-      "A": "✨ Gano Congruencia · 30 sobres, 600 g\n💰 Precio público: $1,857 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "🌿 Gano Congruencia reúne fibras y hongos en sobres\n📦 30 sobres, 600 g\n🔎 Según el catálogo Bio4: linaza, inulina, amaranto, Ganoderma y melena de león.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres ver la etiqueta y la presentación? Escríbeme."
+      "A": "✨ Gano Congruencia · 30 sobres, 600 g\n🌿 Combina Bio.Con, Bio.Gru, Bio.Cia y Gano He.\n💰 Precio público: $1,857 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
+      "B": "🌿 Gano Congruencia: Bio.Con + Bio.Gru + Bio.Cia + Gano He en sobres\n📦 30 sobres, 600 g\n🔎 Según el catálogo Bio4: linaza, inulina, amaranto, Ganoderma y melena de león.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres ver la etiqueta y la presentación? Escríbeme."
     },
     "informacion": {
-      "A": "✨ Te comparto la información de Gano Congruencia.\n📦 Presentación: 30 sobres, 600 g.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Gano Congruencia viene en 30 sobres (600 g).\n🌾 El catálogo Bio4 destaca linaza, inulina, amaranto, Ganoderma lucidum y melena de león.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que te comparta la etiqueta o revisamos la entrega?"
+      "A": "✨ Te comparto la información de Gano Congruencia.\n🌿 Reúne Bio.Con, Bio.Gru, Bio.Cia y Gano He.\n📦 Presentación: 30 sobres, 600 g.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
+      "B": "¡Claro! 😊 Gano Congruencia viene en 30 sobres (600 g).\n🌿 Combina Bio.Con, Bio.Gru, Bio.Cia y Gano He.\n🌾 El catálogo Bio4 destaca linaza, inulina, amaranto, Ganoderma lucidum y melena de león.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que te comparta la etiqueta o revisamos la entrega?"
     }
   },
   "B4-GANOCONGRUENCIA-02": {
     "catalogo": {
-      "A": "📦 Gano Congruencia Hogar · 720 g\n💰 Precio público: $1,857 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "🏠 Gano Congruencia Hogar · 720 g\nLa lista de ingredientes de esta bolsa se confirma en su propia etiqueta.\n💰 Precio público: $1,857 MXN.\nDisponibilidad y entrega por confirmar."
+      "A": "📦 Gano Congruencia Hogar · 720 g\n🌿 La ficha Bio4 lo presenta como combinación de Bio.Con, Bio.Gru, Bio.Cia y Gano He.\n💰 Precio público: $1,857 MXN.\nDisponibilidad y costo de entrega por confirmar.",
+      "B": "🏠 Gano Congruencia Hogar · 720 g\n🌿 Bio.Con + Bio.Gru + Bio.Cia + Gano He: la propuesta 4 en 1 de Bio4.\nLa lista de ingredientes de esta bolsa se confirma en su propia etiqueta.\n💰 Precio público: $1,857 MXN.\nDisponibilidad y entrega por confirmar."
     },
     "interes": {
-      "A": "✨ Gano Congruencia Hogar · 720 g\n💰 Precio público: $1,857 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "🏠 ¿Conoces Gano Congruencia en formato Hogar?\n📦 Bolsa de 720 g.\n💬 Escríbeme si quieres revisar la información de esta presentación."
+      "A": "✨ Gano Congruencia Hogar · 720 g\n🌿 Bio.Con, Bio.Gru, Bio.Cia y Gano He en la propuesta 4 en 1 de Bio4.\n💰 Precio público: $1,857 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
+      "B": "🏠 ¿Conoces Gano Congruencia en formato Hogar?\n🌿 La ficha Bio4 reúne Bio.Con, Bio.Gru, Bio.Cia y Gano He.\n📦 Bolsa de 720 g.\n💬 Escríbeme si quieres revisar la etiqueta de esta presentación."
     },
     "informacion": {
-      "A": "✨ Te comparto la información de Gano Congruencia Hogar.\n📦 Presentación: 720 g.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Gano Congruencia Hogar viene en 720 g y cuesta $1,857 MXN al público.\nLa composición de esta bolsa se confirma con su etiqueta.\n💬 ¿Quieres que revise ingredientes, disponibilidad o entrega primero?"
+      "A": "✨ Te comparto la información de Gano Congruencia Hogar.\n🌿 La ficha Bio4 lo describe como combinación de Bio.Con, Bio.Gru, Bio.Cia y Gano He.\n📦 Presentación: 720 g.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
+      "B": "¡Claro! 😊 Gano Congruencia Hogar viene en 720 g y cuesta $1,857 MXN al público.\n🌿 Bio4 presenta Gano Congruencia como combinación de Bio.Con, Bio.Gru, Bio.Cia y Gano He.\nLa composición de esta bolsa se confirma con su etiqueta.\n💬 ¿Quieres que revise ingredientes, disponibilidad o entrega primero?"
     }
   },
   "B4-BIOCON-01": {
