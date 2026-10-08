@@ -32,6 +32,18 @@ export const cosmeticFacts = {
   'B4-COLAGENO-FACIAL-01': {benefit:'Humectación para el cuidado facial.',ingredients:['Colágeno hidrolizado','Ganoderma lucidum','Ácido hialurónico']},
   'B4-GANOSOAP-01': {benefit:'Limpieza y humectación.',ingredients:['Ganoderma lucidum','Glicerina']}
 };
+// Lead with a supported customer-facing use, then let the existing copy explain
+// the ingredients, presentation and price. Variant B remains ingredient-led.
+const benefitOpeners = {
+  'B4-GANOCONGRUENCIA-01':'🌿 Cuatro líneas Bio4 reunidas en sobres para una rutina sencilla.',
+  'B4-GANOCONGRUENCIA-02':'🌿 Cuatro líneas Bio4 reunidas en una sola presentación para el hogar.',
+  'B4-BIOCON-01':'🌾 Suma linaza, inulina y amaranto a tu rutina con sabor tamarindo.',
+  'B4-BIOCON-02':'🌾 Suma linaza, inulina y amaranto a tu rutina con sabor ciruela.',
+  'B4-KENKO-CAFE-01':'☕ Disfruta café con Ganoderma en sobres fáciles de llevar.',
+  'B4-KENKO-CAFE-02':'☕ Disfruta café con Ganoderma en presentación de frasco.',
+  'B4-KENKO-CAFE-03':'☕ Disfruta café con Ganoderma en la presentación Biopack.',
+  'B4-SHII-MANOS-01':'🧴 Dale a tus manos un momento de hidratación y suavidad.'
+};
 // Copy-ready highlights are limited to descriptive facts and modest everyday
 // uses already present in the public catalog. Health claims are not inferred
 // from an ingredient or from a product's name.
@@ -172,9 +184,16 @@ function baseShareCopy(p,stage='interes',variant='A') {
 export function makeShareCopy(p,stage='interes',variant='A') {
   let copy=baseShareCopy(p,stage,variant);
   if(!copy)return '';
+  if(variant==='A'&&stage==='interes'&&benefitOpeners[p.id]) {
+    const price=p.price===null?'Precio por confirmar.':`$${new Intl.NumberFormat('es-MX').format(p.price)} MXN al público.`;
+    const detail=shareSpotlight(p).text.replace(/\.$/,'');
+    return `${benefitOpeners[p.id]}\n📦 ${p.name} · ${p.presentation}\n🔎 ${detail.charAt(0).toLocaleUpperCase('es-MX')+detail.slice(1)}.\n💰 ${price}\n💬 ¿Te comparto los detalles? Escríbeme.`;
+  }
   copy=addSpotlight(copy,p,stage,variant);
+  if(variant==='A'&&p.id==='B4-SHII-MANOS-01'&&['catalogo','informacion'].includes(stage))copy=copy.replace('✨ Hidratación y suavidad para las manos.\n','');
   if(variant==='A'&&stage==='interes')copy=copy.replace('¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.',questionFor(p,stage));
   if(variant==='A'&&stage==='informacion')copy=copy.replace('¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.',`${questionFor(p,stage)} Antes de pedir, confirmamos disponibilidad y total.`);
+  if(variant==='A'&&['catalogo','interes','informacion'].includes(stage)&&benefitOpeners[p.id])copy=`${benefitOpeners[p.id]}\n${copy}`;
   return copy;
 }
 export function shareTextIssues(text) {
