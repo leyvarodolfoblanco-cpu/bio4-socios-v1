@@ -39,10 +39,69 @@ const benefitOpeners = {
   'B4-GANOCONGRUENCIA-02':'🌿 Cuatro líneas Bio4 reunidas en una sola presentación para el hogar.',
   'B4-BIOCON-01':'🌾 Suma linaza, inulina y amaranto a tu rutina con sabor tamarindo.',
   'B4-BIOCON-02':'🌾 Suma linaza, inulina y amaranto a tu rutina con sabor ciruela.',
+  'B4-BIOGRU-01':'🌿 Calcio de coral y chlorella reunidos en cápsulas.',
+  'B4-BIOEN-01':'🌿 Ganoderma y wild yam en una sola presentación.',
+  'B4-BIOCIA-01':'🌿 Tila, valeriana y complejo B reunidos en cápsulas.',
+  'B4-BIOFLEX-01':'🌿 Glucosamina, condroitina y colágeno en una sola presentación.',
+  'B4-ETERNAL-01':'🌿 NAD+, NMN y resveratrol reunidos en cápsulas.',
+  'B4-BIOFORCE-01':'🌿 Noni, ginseng y jalea real en una sola fórmula.',
+  'B4-BIOLYBER-01':'🌿 Boldo, alcachofa y silimarina reunidos en cápsulas.',
+  'B4-TODAY-01':'🌿 Ginseng, Ganoderma y extractos botánicos en una presentación.',
+  'B4-SUPERBIO-01':'🌿 Vitaminas B, C, D3 y E junto con minerales en tabletas.',
+  'B4-BIOMIEL-01':'🍯 Miel, propóleo y extractos herbales en un solo frasco.',
+  'B4-BIOFIT-01':'🌿 Dale un toque de hierbabuena y menta a tu rutina.',
+  'B4-4DXT-XTI-01':'🌿 Alcachofa, espirulina y vitaminas en cápsulas.',
+  'B4-4DXT-ANTIOX-01':'🌿 Ganoderma, té verde y aminoácidos en sobres.',
+  'B4-COLAGENO-GEL-01':'🥤 Colágeno, moringa y mora azul en sobres individuales.',
+  'B4-GANOHE-01':'🍄 Ganoderma y melena de león en una presentación compacta.',
+  'B4-BIOPROPOLEO-01':'🌿 Propóleo, Ganoderma y menta reunidos en 22 ml.',
+  'B4-KENKO-TODAY-01':'☕ Disfruta la mezcla Kenko Today en formato Biopack.',
+  'B4-KENKO-TODAY-02':'☕ Disfruta Kenko Today en sobres individuales.',
+  'B4-SATTVA-01':'🥤 Proteínas, colágeno y hongos reunidos en sobres.',
   'B4-KENKO-CAFE-01':'☕ Disfruta café con Ganoderma en sobres fáciles de llevar.',
   'B4-KENKO-CAFE-02':'☕ Disfruta café con Ganoderma en presentación de frasco.',
   'B4-KENKO-CAFE-03':'☕ Disfruta café con Ganoderma en la presentación Biopack.',
-  'B4-SHII-MANOS-01':'🧴 Dale a tus manos un momento de hidratación y suavidad.'
+  'B4-KENKO-OLLA-01':'☕ Disfruta el sabor de café de olla con canela y Ganoderma.',
+  'B4-BIOFLAX-01':'🌾 Agrega linaza canadiense molida a tus preparaciones.',
+  'B4-BIOFLAX-02':'🌾 Agrega linaza y chía a tus preparaciones.',
+  'B4-GANODENT-01':'🪥 Incluye menta y manzanilla en tu rutina de limpieza bucal.',
+  'B4-LADOUCHE-01':'🧴 Un momento de limpieza y cuidado diario para tu piel.',
+  'B4-LADOUCHE-02':'🧴 Limpieza confortable para tu rutina de cuidado íntimo.',
+  'B4-GANOSOAP-01':'🧼 Limpieza y humectación en una presentación de tres barras.',
+  'B4-4BELLE-01':'🧴 Dale hidratación a tu rutina de cuidado facial.',
+  'B4-COLAGENO-FACIAL-01':'🧴 Suma humectación a tu rutina de cuidado facial.',
+  'B4-GANOSUN-01':'🧴 Conoce una opción de cuidado diario para la piel.',
+  'B4-DIAMANTES-SHAMPOO-01':'🧴 Dale hidratación a tu rutina de lavado del cabello.',
+  'B4-DIAMANTES-ACOND-01':'🧴 Hidratación y cuidado del frizz en tu rutina capilar.',
+  'B4-SHII-DESMAQUILLANTE-01':'🧴 Retira el maquillaje con una sensación de suavidad.',
+  'B4-SHII-TONICO-01':'🧴 Completa tu rutina de limpieza facial con Tónico Shii.',
+  'B4-EXFOLIANTE-01':'🧴 Dale espacio a la exfoliación en tu rutina de cuidado.',
+  'B4-SHII-MANOS-01':'🧴 Dale a tus manos un momento de hidratación y suavidad.',
+  'B4-SHII-SEDA-01':'🧴 Un momento de hidratación para el cuidado de tu piel.',
+  'B4-SHII-TOMILLO-01':'🧴 Acompaña tu rutina de masaje con Shii Tomillo.',
+  'B4-4DXT-KUUL-01':'🧴 Disfruta una sensación refrescante al aplicar 4DXT Ku’ul.',
+  'B4-MINICABINA-01':'🧴 Reúne varios productos Bio4 en un estuche para tu rutina.',
+  'B4-BIOCRISTAL-01':'✨ Conoce Bio Cristal en presentación de 250 ml.',
+  'B4-BIOCRISTAL-02':'✨ Repón tu Bio Cristal con esta presentación de 250 ml.',
+  'B4-BIOCLEAN-01':'🧽 Una opción para limpiar manchas difíciles en casa.',
+  'B4-4SAVE-01':'🏠 Conoce una esfera compacta para uso doméstico.',
+  'B4-AHORRADOR-GASOLINA-01':'🚗 Conoce un dispositivo de instalación sencilla.',
+  'B4-COSMETIQUERA-01':'👜 Organiza y lleva tus productos Bio4 en una cosmetiquera.',
+  'B4-KIT-INICIO-01':'📚 Reúne materiales para empezar como socio Bio4.',
+  'B4-CATALOGO-01':'📖 Muestra las presentaciones Bio4 en un solo catálogo.',
+  'B4-REVISTA-01':'📖 Consulta información técnica a tu ritmo.',
+  'B4-FICHAS-01':'📚 Encuentra datos de producto para responder con claridad.',
+  'B4-PEDIDOS-01':'📝 Lleva tus pedidos organizados en un block.',
+  'B4-NOTAS-VENTA-01':'📝 Registra los datos de tus ventas en un solo lugar.',
+  'B4-MANUAL-SECUENCIA-01':'📚 Prepara tus conversaciones con una guía a mano.',
+  'B4-BOLSA-ECO-01':'🛍️ Entrega tus productos en una bolsa reutilizable chica.',
+  'B4-BOLSA-ECO-02':'🛍️ Lleva pedidos más grandes en una bolsa reutilizable.',
+  'B4-SHAKER-BIO4-01':'🥤 Prepara tus productos Bio4 donde estés.',
+  'B4-SHAKER-4DXT-01':'🥤 Ten un shaker para tu rutina con la línea 4DXT.',
+  'B4-VASO-KENKO-01':'☕ Disfruta Kenko Café en su vaso de la marca.',
+  'B4-PROTECTOR-VASO-01':'☕ Sujeta el vaso de Kenko Café con su protector de calor.',
+  'B4-CEUTICA4-01':'🥤 Tres fuentes de proteína reunidas en Ceutica4 Natural.',
+  'B4-GANOSUN-02':'🧴 Conoce Gano Sun en sobres individuales.'
 };
 // Copy-ready highlights are limited to descriptive facts and modest everyday
 // uses already present in the public catalog. Health claims are not inferred
@@ -67,11 +126,13 @@ const everydayHighlights = {
   'B4-COLAGENO-GEL-01':'El catálogo Bio4 reúne colágeno hidrolizado, moringa, mora azul y vitamina E.',
   'B4-GANOHE-01':'El catálogo Bio4 destaca Ganoderma y melena de león.',
   'B4-BIOPROPOLEO-01':'El catálogo Bio4 destaca propóleo, Ganoderma y menta.',
+  'B4-CEUTICA4-01':'La ficha Bio4 reúne proteínas de suero de leche, soya y huevo.',
+  'B4-KENKO-TODAY-01':'La ficha Bio4 presenta café con Ganoderma, ginseng y tongkat ali.',
   'B4-KENKO-TODAY-02':'La presentación de 25 sobres destaca Ganoderma, ginseng y tongkat ali según la tarjeta Bio4.',
   'B4-SATTVA-01':'El catálogo Bio4 destaca suero de leche, colágeno y hongos.',
-  'B4-KENKO-CAFE-01':'Café con Ganoderma en presentación de 25 sobres.',
-  'B4-KENKO-CAFE-02':'Café con Ganoderma en frasco de 135 g.',
-  'B4-KENKO-OLLA-01':'Café de olla con canela y Ganoderma en 20 sobres.',
+  'B4-KENKO-CAFE-01':'Café de altura y Ganoderma lucidum.',
+  'B4-KENKO-CAFE-02':'Café de altura y Ganoderma lucidum.',
+  'B4-KENKO-OLLA-01':'Café de altura, canela y Ganoderma lucidum.',
   'B4-BIOFLAX-01':'Linaza molida en presentación de 600 g.',
   'B4-BIOFLAX-02':'El catálogo Bio4 reúne linaza y chía.',
   'B4-GANODENT-01':'Una opción para tu rutina de limpieza bucal.',
@@ -141,10 +202,11 @@ function questionFor(p,stage) {
 }
 function addSpotlight(copy,p,stage,variant) {
   if(!['catalogo','interes','informacion'].includes(stage))return copy;
+  if(variant==='A'&&benefitOpeners[p.id]&&['HERRAMIENTAS','PUBLICITARIOS'].includes(p.category))return copy;
   // These drafts already place their documented ingredients and format clearly.
   if(['B4-GANOCONGRUENCIA-02','B4-KENKO-CAFE-03','B4-CEUTICA4-01'].includes(p.id))return copy;
   // These B variants already contain a source-attributed ingredient hook.
-  if(variant==='B'&&['B4-GANOCONGRUENCIA-01','B4-BIOLYBER-01','B4-BIOMIEL-01','B4-4DXT-XTI-01'].includes(p.id))return copy;
+  if(variant==='B'&&['B4-GANOCONGRUENCIA-01','B4-BIOLYBER-01','B4-BIOMIEL-01','B4-4DXT-XTI-01','B4-KENKO-TODAY-01'].includes(p.id))return copy;
   const {label,text}=shareSpotlight(p);
   if(label==='Presentación')return copy;
   // Detailed B drafts already name the ingredients. Keep them intact unless
@@ -186,11 +248,14 @@ export function makeShareCopy(p,stage='interes',variant='A') {
   if(!copy)return '';
   if(variant==='A'&&stage==='interes'&&benefitOpeners[p.id]) {
     const price=p.price===null?'Precio por confirmar.':`$${new Intl.NumberFormat('es-MX').format(p.price)} MXN al público.`;
-    const detail=shareSpotlight(p).text.replace(/\.$/,'');
-    return `${benefitOpeners[p.id]}\n📦 ${p.name} · ${p.presentation}\n🔎 ${detail.charAt(0).toLocaleUpperCase('es-MX')+detail.slice(1)}.\n💰 ${price}\n💬 ¿Te comparto los detalles? Escríbeme.`;
+    const spotlight=shareSpotlight(p);
+    const detail=spotlight.text.replace(/\.$/,'');
+    const repeatUse=['HERRAMIENTAS','PUBLICITARIOS'].includes(p.category)||spotlight.label==='Presentación'||spotlight.label==='Beneficio de uso';
+    const detailLine=repeatUse?'':`\n🔎 ${detail.charAt(0).toLocaleUpperCase('es-MX')+detail.slice(1)}.`;
+    return `${benefitOpeners[p.id]}\n📦 ${p.name} · ${p.presentation}${detailLine}\n💰 ${price}\n💬 ¿Te comparto los detalles? Escríbeme.`;
   }
   copy=addSpotlight(copy,p,stage,variant);
-  if(variant==='A'&&p.id==='B4-SHII-MANOS-01'&&['catalogo','informacion'].includes(stage))copy=copy.replace('✨ Hidratación y suavidad para las manos.\n','');
+  if(variant==='A'&&['catalogo','informacion'].includes(stage)&&cosmeticFacts[p.id])copy=copy.replace(`✨ ${cosmeticFacts[p.id].benefit}\n`,'');
   if(variant==='A'&&stage==='interes')copy=copy.replace('¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.',questionFor(p,stage));
   if(variant==='A'&&stage==='informacion')copy=copy.replace('¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.',`${questionFor(p,stage)} Antes de pedir, confirmamos disponibilidad y total.`);
   if(variant==='A'&&['catalogo','interes','informacion'].includes(stage)&&benefitOpeners[p.id])copy=`${benefitOpeners[p.id]}\n${copy}`;
