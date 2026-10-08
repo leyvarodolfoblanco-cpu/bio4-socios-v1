@@ -144,15 +144,15 @@ export const reviewedDrafts = {
   "B4-BIOLYBER-01": {
     "catalogo": {
       "A": "📦 Bio.Lyber · 60 cápsulas\n💰 Precio público: $709 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 Bio.Lyber · 60 cápsulas\n🔎 Composición de esta presentación por confirmar.\n💰 Precio público: 709 MXN.\nConfirma disponibilidad y entrega antes del pedido."
+      "B": "📦 Bio.Lyber · 60 cápsulas\n🔎 Su etiqueta incluye boldo, silimarina, alcachofa, rhodiola y arándano.\n💰 Precio público: $709 MXN.\nDisponibilidad y entrega por confirmar."
     },
     "interes": {
       "A": "✨ Bio.Lyber · 60 cápsulas\n💰 Precio público: $709 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "✨ Bio.Lyber\n📦 60 cápsulas\n💰 Precio público: 709 MXN.\n💬 ¿Quieres conocer los detalles de esta presentación? Escríbeme."
+      "B": "✨ Bio.Lyber\n🌿 Boldo, silimarina, alcachofa y rhodiola en una mezcla botánica.\n📦 60 cápsulas · $709 MXN precio público.\n💬 ¿Te comparto la etiqueta para conocer sus ingredientes?"
     },
     "informacion": {
       "A": "✨ Te comparto la información de Bio.Lyber.\n📦 Presentación: 60 cápsulas.\n💰 Precio público: $709 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Te comparto lo confirmado de Bio.Lyber.\n📦 60 cápsulas\n💰 Precio público: 709 MXN.\n💬 ¿Quieres que confirme características, disponibilidad y entrega?"
+      "B": "¡Claro! 😊 Bio.Lyber es un suplemento de 60 cápsulas.\n🔎 En la etiqueta aparecen boldo, diente de león, alcachofa, silimarina, rhodiola y arándano, entre otros ingredientes.\n💰 Precio público: $709 MXN.\n💬 ¿Quieres que revisemos la etiqueta o que confirme disponibilidad y entrega?"
     }
   },
   "B4-TODAY-01": {
@@ -185,16 +185,16 @@ export const reviewedDrafts = {
   },
   "B4-BIOMIEL-01": {
     "catalogo": {
-      "A": "📦 Bio.Miel · 546 g\n💰 Precio público: $776 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 Bio.Miel · 546 g\n🔎 Composición de esta presentación por confirmar.\n💰 Precio público: 776 MXN.\nConfirma disponibilidad y entrega antes del pedido."
+      "A": "🍯 Bio.Miel · jarabe herbal de 420 ml (546 g)\n💰 Precio público: $776 MXN.\nDisponibilidad y costo de entrega por confirmar.",
+      "B": "🍯 Bio.Miel · 420 ml (546 g)\n🔎 Su etiqueta incluye miel de abeja, propóleo, bugambilia y eucalipto.\n💰 Precio público: $776 MXN.\nDisponibilidad y entrega por confirmar."
     },
     "interes": {
-      "A": "✨ Bio.Miel · 546 g\n💰 Precio público: $776 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "✨ Bio.Miel\n📦 546 g\n💰 Precio público: 776 MXN.\n💬 ¿Quieres conocer los detalles de esta presentación? Escríbeme."
+      "A": "🍯 Bio.Miel · jarabe herbal de 420 ml (546 g)\n💰 Precio público: $776 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
+      "B": "🍯 Bio.Miel\n🌿 Miel de abeja con propóleo y extractos herbales.\n📦 420 ml (546 g) · $776 MXN precio público.\n💬 ¿Te comparto los ingredientes de la etiqueta?"
     },
     "informacion": {
-      "A": "✨ Te comparto la información de Bio.Miel.\n📦 Presentación: 546 g.\n💰 Precio público: $776 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Te comparto lo confirmado de Bio.Miel.\n📦 546 g\n💰 Precio público: 776 MXN.\n💬 ¿Quieres que confirme características, disponibilidad y entrega?"
+      "A": "🍯 Te comparto Bio.Miel, jarabe herbal.\n📦 Presentación: 420 ml (546 g).\n💰 Precio público: $776 MXN.\n💬 ¿Quieres revisar sus ingredientes o la entrega? Antes de pedir, confirmamos disponibilidad y total.",
+      "B": "¡Claro! 😊 Bio.Miel es un jarabe herbal de 420 ml (546 g).\n🔎 Su etiqueta destaca miel de abeja, propóleo, bugambilia y eucalipto.\n💰 Precio público: $776 MXN.\n💬 ¿Quieres que te comparta la etiqueta o que confirme entrega?"
     }
   },
   "B4-BIOFIT-01": {
@@ -214,15 +214,15 @@ export const reviewedDrafts = {
   "B4-4DXT-XTI-01": {
     "catalogo": {
       "A": "📦 4DXT XTI · 90 cápsulas\n💰 Precio público: $817 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 4DXT XTI · 90 cápsulas\n🔎 Composición de esta presentación por confirmar.\n💰 Precio público: 817 MXN.\nConfirma disponibilidad y entrega antes del pedido."
+      "B": "📦 4DXT XTI · 90 cápsulas\n🔎 Su etiqueta incluye alcachofa, espirulina, L-carnitina y vitaminas B3 y B6.\n💰 Precio público: $817 MXN.\nDisponibilidad y entrega por confirmar."
     },
     "interes": {
       "A": "✨ 4DXT XTI · 90 cápsulas\n💰 Precio público: $817 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "✨ 4DXT XTI\n📦 90 cápsulas\n💰 Precio público: 817 MXN.\n💬 ¿Quieres conocer los detalles de esta presentación? Escríbeme."
+      "B": "✨ 4DXT XTI\n🌿 Espirulina, alcachofa y L-carnitina en una fórmula de 90 cápsulas.\n💰 $817 MXN precio público.\n💬 ¿Quieres que te comparta la etiqueta?"
     },
     "informacion": {
       "A": "✨ Te comparto la información de 4DXT XTI.\n📦 Presentación: 90 cápsulas.\n💰 Precio público: $817 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Te comparto lo confirmado de 4DXT XTI.\n📦 90 cápsulas\n💰 Precio público: 817 MXN.\n💬 ¿Quieres que confirme características, disponibilidad y entrega?"
+      "B": "¡Claro! 😊 4DXT XTI es un suplemento de 90 cápsulas.\n🔎 Su etiqueta incluye alcachofa, cocolmeca, espirulina, L-carnitina, chitosán y vitaminas B3 y B6, entre otros ingredientes.\n💰 Precio público: $817 MXN.\n💬 ¿Quieres que revisemos la etiqueta o que confirme disponibilidad y entrega?"
     }
   },
   "B4-4DXT-ANTIOX-01": {

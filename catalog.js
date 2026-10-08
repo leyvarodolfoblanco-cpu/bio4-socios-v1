@@ -167,7 +167,7 @@ export const products=[
     "category": "SUPLEMENTOS",
     "presentation": "60 cápsulas",
     "price": 709,
-    "ingredients": null,
+    "ingredients": "Boldo, diente de león, alcachofa, neem, silimarina, betacaroteno, Rhodiola rosea, arándano, licopeno y arroz.",
     "image": null,
     "benefits": [
       "Equilibrio metabólico.",
@@ -209,9 +209,9 @@ export const products=[
     "id": "B4-BIOMIEL-01",
     "name": "Bio.Miel",
     "category": "SUPLEMENTOS",
-    "presentation": "546 g",
+    "presentation": "420 ml (546 g)",
     "price": 776,
-    "ingredients": null,
+    "ingredients": "Miel de abeja, propóleo, bugambilia y eucalipto, entre otros ingredientes de la etiqueta.",
     "image": null,
     "benefits": [
       "Favorece el bienestar respiratorio.",
@@ -242,7 +242,7 @@ export const products=[
     "category": "SUPLEMENTOS",
     "presentation": "90 cápsulas",
     "price": 817,
-    "ingredients": null,
+    "ingredients": "Alcachofa, cocolmeca, tlanchalagua, vinagre de manzana, espirulina, L-carnitina, chitosán, vitaminas B6 y B3, cromo y polisacáridos de arroz.",
     "image": "assets/B4-4DXT-XTI-01.png",
     "benefits": [
       "Mejor digestión.",

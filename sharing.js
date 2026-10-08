@@ -1,5 +1,5 @@
 // Drafts for the webapp. None of these texts is a WhatsApp/Meta approval.
-import {reviewedDrafts} from './share-drafts.js?v=precio-ceutica-20260924';
+import {reviewedDrafts} from './share-drafts.js?v=etiquetas-20261007';
 export const shareProfiles = {
   'B4-SHII-MANOS-01': ['Un detalle para tu rutina de cuidado de manos.', 'Manos suaves: un pequeño detalle en tu rutina diaria.', 'MANOS'],
   'B4-SHII-SEDA-01': ['Un espacio para el cuidado corporal en tu día.', 'Dale un momento de cuidado a tu piel.', 'SEDA'],
@@ -36,6 +36,9 @@ export const cosmeticFacts = {
 // uses already present in the public catalog. Health claims are not inferred
 // from an ingredient or from a product's name.
 const everydayHighlights = {
+  'B4-BIOLYBER-01':'Mezcla botánica con boldo, silimarina, alcachofa y rhodiola.',
+  'B4-BIOMIEL-01':'Jarabe de miel con propóleo y extractos herbales.',
+  'B4-4DXT-XTI-01':'Fórmula con espirulina, L-carnitina y vitaminas B3 y B6.',
   'B4-GANODENT-01':'Una opción para tu rutina de limpieza bucal.',
   'B4-LADOUCHE-01':'Limpieza y cuidado diario de la piel.',
   'B4-LADOUCHE-02':'Limpieza confortable para el cuidado íntimo.',
@@ -76,6 +79,8 @@ export function shareSpotlight(p) {
 }
 function addSpotlight(copy,p,stage,variant) {
   if(!['catalogo','interes','informacion'].includes(stage))return copy;
+  // These B variants already contain their package-verified ingredient hook.
+  if(variant==='B'&&['B4-BIOLYBER-01','B4-BIOMIEL-01','B4-4DXT-XTI-01'].includes(p.id))return copy;
   const {label,text}=shareSpotlight(p);
   // Detailed B drafts already name the ingredients. Keep them intact unless
   // there is a distinct everyday benefit to show.
