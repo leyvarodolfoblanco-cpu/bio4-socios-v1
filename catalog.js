@@ -402,7 +402,7 @@ export const products=[
     "category": "ALIMENTOS",
     "presentation": "210 g",
     "price": 922,
-    "ingredients": null,
+    "ingredients": "Café de altura y Ganoderma lucidum.",
     "image": "assets/B4-KENKO-CAFE-03.png",
     "benefits": [
       "Poderoso antioxidante.",
@@ -972,7 +972,7 @@ export const products=[
     "category": "SUPLEMENTOS",
     "presentation": "500 g, sabor natural",
     "price": 1299,
-    "ingredients": null,
+    "ingredients": "Proteína de suero de leche, harina y proteína aislada de soya, albúmina de huevo, cebada, açaí, mangostán, Ganoderma lucidum, inulina de agave, L-carnitina y vitaminas A, B1, B3, B6, C y E.",
     "image": "assets/B4-CEUTICA4-01.png",
     "benefits": [
       "Regulación digestiva.",

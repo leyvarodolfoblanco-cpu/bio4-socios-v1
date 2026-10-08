@@ -311,16 +311,16 @@ export const reviewedDrafts = {
   },
   "B4-CEUTICA4-01": {
     "catalogo": {
-      "A": "📦 Ceutica4 Natural · 500 g, sabor natural\n💰 Precio público: $1,299 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "🥤 Ceutica4 Natural · 500 g, sabor natural\nConsulta la lista de ingredientes y alérgenos del envase Natural vigente.\n💰 Precio público: $1,299 MXN.\nDisponibilidad y entrega por confirmar."
+      "A": "🥤 Ceutica4 Natural · 500 g\n🔎 Su ficha Bio4 reúne proteínas de suero de leche, soya y huevo, junto con Ganoderma.\n💰 Precio público: $1,299 MXN.\nDisponibilidad y entrega por confirmar.",
+      "B": "🥤 Ceutica4 Natural · 500 g\n🔎 La ficha Bio4 destaca proteínas de suero de leche, soya y huevo, Ganoderma, inulina de agave, L-carnitina y vitaminas.\nContiene ingredientes de leche, soya y huevo; consulta la etiqueta para la lista completa.\n💰 Precio público: $1,299 MXN.\nDisponibilidad y entrega por confirmar."
     },
     "interes": {
-      "A": "✨ Ceutica4 Natural · 500 g, sabor natural\n💰 Precio público: $1,299 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "🥤 Ceutica4 Natural · 500 g\n¿Quieres conocer la lista de ingredientes y alérgenos de esta presentación? Escríbeme 💬."
+      "A": "🥤 Ceutica4 Natural · 500 g\n🌿 Una mezcla con proteínas de suero, soya y huevo, según su ficha Bio4.\n💬 ¿Quieres ver sus ingredientes y el precio? Escríbeme.",
+      "B": "🥤 ¿Qué contiene Ceutica4 Natural?\n🔎 Su ficha Bio4 destaca proteínas, Ganoderma, inulina y vitaminas.\n📦 500 g · $1,299 MXN al público.\n💬 ¿Te comparto la etiqueta para revisar ingredientes y alérgenos?"
     },
     "informacion": {
-      "A": "✨ Te comparto la información de Ceutica4 Natural.\n📦 Presentación: 500 g, sabor natural.\n💰 Precio público: $1,299 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Ceutica4 Natural viene en 500 g, sabor natural, y cuesta $1,299 MXN al público.\nAntes de elegirlo, revisemos los ingredientes y alérgenos del envase vigente.\n💬 ¿Quieres que te confirme esa información o la entrega primero?"
+      "A": "¡Claro! 😊 Ceutica4 Natural viene en bolsa de 500 g.\n🔎 La ficha Bio4 destaca proteínas de suero de leche, soya y huevo, además de Ganoderma.\n💰 Precio público: $1,299 MXN.\n💬 ¿Quieres revisar la etiqueta y confirmar disponibilidad?",
+      "B": "🥤 Ceutica4 Natural, 500 g · $1,299 MXN al público.\n🔎 Según su ficha Bio4, reúne proteínas de suero, soya y huevo, Ganoderma, inulina de agave, L-carnitina y vitaminas.\nLa etiqueta confirma la lista completa y los alérgenos.\n💬 ¿Te la comparto o revisamos la entrega?"
     }
   },
   "B4-SATTVA-01": {
@@ -367,16 +367,16 @@ export const reviewedDrafts = {
   },
   "B4-KENKO-CAFE-03": {
     "catalogo": {
-      "A": "📦 Kenko Café Biopack · 210 g\n💰 Precio público: $922 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "☕ Kenko Café Biopack · 210 g\nConoce el formato Biopack y revisa los ingredientes de su envase antes de elegirlo.\n💰 Precio público: $922 MXN.\nDisponibilidad y entrega por confirmar."
+      "A": "☕ Kenko Café Biopack · 210 g\n🌿 Café de altura con Ganoderma lucidum, la mezcla Kenko Café en bolsa.\n💰 Precio público: $922 MXN.\nDisponibilidad y entrega por confirmar.",
+      "B": "☕ Kenko Café Biopack · 210 g\n🔎 Ingredientes destacados: café de altura y Ganoderma lucidum.\nEs el mismo Kenko Café de los sobres y el frasco; cambia la presentación y el precio.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $922 MXN.\nDisponibilidad y entrega por confirmar."
     },
     "interes": {
-      "A": "✨ Kenko Café Biopack · 210 g\n💰 Precio público: $922 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "☕ Kenko Café en formato Biopack · 210 g\n💬 ¿Quieres conocer esta presentación y la información de su envase? Escríbeme."
+      "A": "☕ ¿Te gusta Kenko Café? También viene en bolsa Biopack de 210 g.\n🌿 Café de altura con Ganoderma.\n💬 ¿Quieres saber el precio o ver esta presentación? Escríbeme.",
+      "B": "☕ El mismo Kenko Café, ahora en formato Biopack de 210 g.\n🔎 Café de altura + Ganoderma lucidum.\n💰 Precio público: $922 MXN.\n💬 ¿Quieres ver la bolsa y conocer cómo pedirla? Escríbeme."
     },
     "informacion": {
-      "A": "✨ Te comparto la información de Kenko Café Biopack.\n📦 Presentación: 210 g.\n💰 Precio público: $922 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Kenko Café Biopack viene en 210 g y cuesta $922 MXN al público.\nLa lista de ingredientes de este formato se confirma con su etiqueta actual.\n💬 ¿Quieres que revise el envase o las opciones de entrega primero?"
+      "A": "¡Claro! 😊 Kenko Café Biopack es la presentación en bolsa de 210 g del mismo Kenko Café de sobres y frasco.\n🌿 Destacan café de altura y Ganoderma lucidum.\n💰 Precio público: $922 MXN.\n💬 ¿Quieres que confirme disponibilidad y entrega?",
+      "B": "☕ Kenko Café Biopack viene en bolsa de 210 g; cambia la presentación y el precio, no la mezcla Kenko Café.\n🔎 Café de altura y Ganoderma lucidum. Consulta la etiqueta para la lista completa.\n💰 Precio público: $922 MXN.\n💬 ¿Te comparto la foto del producto o revisamos la entrega?"
     }
   },
   "B4-KENKO-OLLA-01": {
