@@ -4,29 +4,29 @@ export const reviewedDrafts = {
   "B4-GANOCONGRUENCIA-01": {
     "catalogo": {
       "A": "📦 Gano Congruencia · 30 sobres, 600 g\n💰 Precio público: $1,857 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 Gano Congruencia · 30 sobres, 600 g\n🔎 Ingredientes destacados del catálogo: Linaza, inulina, amaranto.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\nConfirma disponibilidad y condiciones antes de acordar el pedido."
+      "B": "📦 Gano Congruencia · 30 sobres, 600 g\n🌾 El catálogo Bio4 destaca linaza, inulina y amaranto, junto con Ganoderma lucidum y melena de león.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\nConfirma disponibilidad y condiciones antes de acordar el pedido."
     },
     "interes": {
       "A": "✨ Gano Congruencia · 30 sobres, 600 g\n💰 Precio público: $1,857 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "✨ Conoce qué contiene Gano Congruencia\n📦 30 sobres, 600 g\n🔎 Ingredientes destacados: Linaza, inulina, amaranto.\n💰 Precio público: $1,857 MXN.\n💬 Escríbeme y revisamos los datos de la etiqueta."
+      "B": "🌿 Gano Congruencia reúne fibras y hongos en sobres\n📦 30 sobres, 600 g\n🔎 Según el catálogo Bio4: linaza, inulina, amaranto, Ganoderma y melena de león.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres ver la etiqueta y la presentación? Escríbeme."
     },
     "informacion": {
       "A": "✨ Te comparto la información de Gano Congruencia.\n📦 Presentación: 30 sobres, 600 g.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Te comparto los datos de Gano Congruencia.\n📦 30 sobres, 600 g\n🔎 Ingredientes destacados del catálogo: Linaza, inulina, amaranto.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres revisar la etiqueta o que confirme las opciones de entrega?"
+      "B": "¡Claro! 😊 Gano Congruencia viene en 30 sobres (600 g).\n🌾 El catálogo Bio4 destaca linaza, inulina, amaranto, Ganoderma lucidum y melena de león.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que te comparta la etiqueta o revisamos la entrega?"
     }
   },
   "B4-GANOCONGRUENCIA-02": {
     "catalogo": {
       "A": "📦 Gano Congruencia Hogar · 720 g\n💰 Precio público: $1,857 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 Gano Congruencia Hogar · 720 g\n🔎 Composición de esta presentación por confirmar.\n💰 Precio público: 1,857 MXN.\nConfirma disponibilidad y entrega antes del pedido."
+      "B": "🏠 Gano Congruencia Hogar · 720 g\nLa lista de ingredientes de esta bolsa se confirma en su propia etiqueta.\n💰 Precio público: $1,857 MXN.\nDisponibilidad y entrega por confirmar."
     },
     "interes": {
       "A": "✨ Gano Congruencia Hogar · 720 g\n💰 Precio público: $1,857 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "✨ Gano Congruencia Hogar\n📦 720 g\n💰 Precio público: 1,857 MXN.\n💬 ¿Quieres conocer los detalles de esta presentación? Escríbeme."
+      "B": "🏠 ¿Conoces Gano Congruencia en formato Hogar?\n📦 Bolsa de 720 g.\n💬 Escríbeme si quieres revisar la información de esta presentación."
     },
     "informacion": {
       "A": "✨ Te comparto la información de Gano Congruencia Hogar.\n📦 Presentación: 720 g.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Te comparto lo confirmado de Gano Congruencia Hogar.\n📦 720 g\n💰 Precio público: 1,857 MXN.\n💬 ¿Quieres que confirme características, disponibilidad y entrega?"
+      "B": "¡Claro! 😊 Gano Congruencia Hogar viene en 720 g y cuesta $1,857 MXN al público.\nLa composición de esta bolsa se confirma con su etiqueta.\n💬 ¿Quieres que revise ingredientes, disponibilidad o entrega primero?"
     }
   },
   "B4-BIOCON-01": {
@@ -284,15 +284,15 @@ export const reviewedDrafts = {
   "B4-KENKO-TODAY-01": {
     "catalogo": {
       "A": "📦 Kenko Today Biopack · 210 g\n💰 Precio público: $1,669 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 Kenko Today Biopack · 210 g\n🔎 Composición de esta presentación por confirmar.\n💰 Precio público: 1,669 MXN.\nConfirma disponibilidad y entrega antes del pedido."
+      "B": "📦 Kenko Today Biopack · 210 g\nLa tarjeta Bio4 de este formato destaca Ganoderma, ginseng y tongkat ali; confirma la fórmula con el envase actual.\n💰 Precio público: $1,669 MXN.\nDisponibilidad y entrega por confirmar."
     },
     "interes": {
       "A": "✨ Kenko Today Biopack · 210 g\n💰 Precio público: $1,669 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "✨ Kenko Today Biopack\n📦 210 g\n💰 Precio público: 1,669 MXN.\n💬 ¿Quieres conocer los detalles de esta presentación? Escríbeme."
+      "B": "🌿 Kenko Today Biopack · 210 g\nLa tarjeta Bio4 destaca Ganoderma, ginseng y tongkat ali.\n💬 ¿Quieres ver la información del envase actual? Escríbeme."
     },
     "informacion": {
       "A": "✨ Te comparto la información de Kenko Today Biopack.\n📦 Presentación: 210 g.\n💰 Precio público: $1,669 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Te comparto lo confirmado de Kenko Today Biopack.\n📦 210 g\n💰 Precio público: 1,669 MXN.\n💬 ¿Quieres que confirme características, disponibilidad y entrega?"
+      "B": "¡Claro! 😊 Kenko Today Biopack viene en 210 g y cuesta $1,669 MXN al público.\nSu tarjeta Bio4 destaca Ganoderma, ginseng y tongkat ali; antes de recomendarlo, revisamos la etiqueta actual.\n💬 ¿Quieres que confirme ingredientes o entrega primero?"
     }
   },
   "B4-KENKO-TODAY-02": {
@@ -312,15 +312,15 @@ export const reviewedDrafts = {
   "B4-CEUTICA4-01": {
     "catalogo": {
       "A": "📦 Ceutica4 Natural · 500 g, sabor natural\n💰 Precio público: $1,299 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 Ceutica4 Natural · 500 g, sabor natural\n🔎 Composición de esta presentación por confirmar.\n💰 Precio público: $1,299 MXN.\nConfirma disponibilidad y entrega antes del pedido."
+      "B": "🥤 Ceutica4 Natural · 500 g, sabor natural\nConsulta la lista de ingredientes y alérgenos del envase Natural vigente.\n💰 Precio público: $1,299 MXN.\nDisponibilidad y entrega por confirmar."
     },
     "interes": {
       "A": "✨ Ceutica4 Natural · 500 g, sabor natural\n💰 Precio público: $1,299 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "✨ Ceutica4 Natural\n📦 500 g, sabor natural\n💰 Precio público: $1,299 MXN.\n💬 ¿Quieres conocer los detalles de esta presentación? Escríbeme."
+      "B": "🥤 Ceutica4 Natural · 500 g\n¿Quieres conocer la lista de ingredientes y alérgenos de esta presentación? Escríbeme 💬."
     },
     "informacion": {
       "A": "✨ Te comparto la información de Ceutica4 Natural.\n📦 Presentación: 500 g, sabor natural.\n💰 Precio público: $1,299 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Te comparto lo confirmado de Ceutica4 Natural.\n📦 500 g, sabor natural\n💰 Precio público: $1,299 MXN.\n💬 ¿Quieres que confirme características, disponibilidad y entrega?"
+      "B": "¡Claro! 😊 Ceutica4 Natural viene en 500 g, sabor natural, y cuesta $1,299 MXN al público.\nAntes de elegirlo, revisemos los ingredientes y alérgenos del envase vigente.\n💬 ¿Quieres que te confirme esa información o la entrega primero?"
     }
   },
   "B4-SATTVA-01": {
@@ -368,15 +368,15 @@ export const reviewedDrafts = {
   "B4-KENKO-CAFE-03": {
     "catalogo": {
       "A": "📦 Kenko Café Biopack · 210 g\n💰 Precio público: $922 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 Kenko Café Biopack · 210 g\n🔎 Composición de esta presentación por confirmar.\n💰 Precio público: 922 MXN.\nConfirma disponibilidad y entrega antes del pedido."
+      "B": "☕ Kenko Café Biopack · 210 g\nConoce el formato Biopack y revisa los ingredientes de su envase antes de elegirlo.\n💰 Precio público: $922 MXN.\nDisponibilidad y entrega por confirmar."
     },
     "interes": {
       "A": "✨ Kenko Café Biopack · 210 g\n💰 Precio público: $922 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "✨ Kenko Café Biopack\n📦 210 g\n💰 Precio público: 922 MXN.\n💬 ¿Quieres conocer los detalles de esta presentación? Escríbeme."
+      "B": "☕ Kenko Café en formato Biopack · 210 g\n💬 ¿Quieres conocer esta presentación y la información de su envase? Escríbeme."
     },
     "informacion": {
       "A": "✨ Te comparto la información de Kenko Café Biopack.\n📦 Presentación: 210 g.\n💰 Precio público: $922 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Te comparto lo confirmado de Kenko Café Biopack.\n📦 210 g\n💰 Precio público: 922 MXN.\n💬 ¿Quieres que confirme características, disponibilidad y entrega?"
+      "B": "¡Claro! 😊 Kenko Café Biopack viene en 210 g y cuesta $922 MXN al público.\nLa lista de ingredientes de este formato se confirma con su etiqueta actual.\n💬 ¿Quieres que revise el envase o las opciones de entrega primero?"
     }
   },
   "B4-KENKO-OLLA-01": {

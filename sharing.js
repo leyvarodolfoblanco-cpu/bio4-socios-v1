@@ -1,5 +1,5 @@
 // Drafts for the webapp. None of these texts is a WhatsApp/Meta approval.
-import {reviewedDrafts} from './share-drafts.js?v=etiquetas-20261007';
+import {reviewedDrafts} from './share-drafts.js?v=compartir-20261007c';
 export const shareProfiles = {
   'B4-SHII-MANOS-01': ['Un detalle para tu rutina de cuidado de manos.', 'Manos suaves: un pequeño detalle en tu rutina diaria.', 'MANOS'],
   'B4-SHII-SEDA-01': ['Un espacio para el cuidado corporal en tu día.', 'Dale un momento de cuidado a tu piel.', 'SEDA'],
@@ -36,9 +36,17 @@ export const cosmeticFacts = {
 // uses already present in the public catalog. Health claims are not inferred
 // from an ingredient or from a product's name.
 const everydayHighlights = {
-  'B4-BIOLYBER-01':'Mezcla botánica con boldo, silimarina, alcachofa y rhodiola.',
-  'B4-BIOMIEL-01':'Jarabe de miel con propóleo y extractos herbales.',
-  'B4-4DXT-XTI-01':'Fórmula con espirulina, L-carnitina y vitaminas B3 y B6.',
+  'B4-GANOCONGRUENCIA-01':'Según el catálogo Bio4, combina linaza e inulina con Ganoderma y melena de león en sobres.',
+  'B4-BIOLYBER-01':'El envase de 60 cápsulas reúne boldo, alcachofa, silimarina y rhodiola.',
+  'B4-BIOMIEL-01':'El frasco de 420 ml combina miel, propóleo y extractos herbales.',
+  'B4-4DXT-XTI-01':'El envase de 90 cápsulas incluye alcachofa, espirulina, L-carnitina y vitaminas B3 y B6.',
+  'B4-KENKO-TODAY-02':'La presentación de 25 sobres destaca Ganoderma, ginseng y tongkat ali según la tarjeta Bio4.',
+  'B4-SATTVA-01':'Presentación de 30 sobres individuales de 15 g.',
+  'B4-KENKO-CAFE-01':'Café con Ganoderma en presentación de 25 sobres.',
+  'B4-KENKO-CAFE-02':'Café con Ganoderma en frasco de 135 g.',
+  'B4-KENKO-OLLA-01':'Café de olla con canela y Ganoderma en 20 sobres.',
+  'B4-BIOFLAX-01':'Linaza molida en presentación de 600 g.',
+  'B4-BIOFLAX-02':'Linaza en presentación de 600 g.',
   'B4-GANODENT-01':'Una opción para tu rutina de limpieza bucal.',
   'B4-LADOUCHE-01':'Limpieza y cuidado diario de la piel.',
   'B4-LADOUCHE-02':'Limpieza confortable para el cuidado íntimo.',
@@ -48,7 +56,7 @@ const everydayHighlights = {
   'B4-SHII-TOMILLO-01':'Una opción para acompañar tu rutina de masaje.',
   'B4-4DXT-KUUL-01':'Sensación refrescante al aplicar.',
   'B4-MINICABINA-01':'Varios productos Bio4 reunidos en un estuche.',
-  'B4-BIOCRISTAL-01':'Elaborado con cristal mineral de origen natural.',
+  'B4-BIOCRISTAL-01':'Contiene cristal mineral.',
   'B4-BIOCRISTAL-02':'Repuesto de 250 ml para Bio Cristal.',
   'B4-BIOCLEAN-01':'Una opción para la limpieza de manchas difíciles.',
   'B4-4SAVE-01':'Diseño compacto para uso doméstico.',
@@ -74,20 +82,31 @@ export function shareSpotlight(p) {
   if(everydayHighlights[p.id])return {label:'Lo que destaca',text:everydayHighlights[p.id].replace(/\.$/,'')};
   const reviewed=reviewedDrafts[p.id]?.catalogo?.B||'';
   const match=reviewed.match(/🔎 Ingredientes destacados(?: del catálogo)?:\s*([^\n]+)/);
-  if(match)return {label:'Ingredientes destacados',text:match[1].replace(/\.$/,'')};
+  if(match)return {label:'Ingredientes según el catálogo',text:match[1].replace(/\.$/,'')};
   return {label:'Presentación',text:p.presentation};
+}
+function questionFor(p,stage) {
+  if(stage==='interes') {
+    if(p.category==='CUIDADO PERSONAL')return '¿Quieres ver sus ingredientes y cómo viene? Escríbeme.';
+    if(p.category==='HERRAMIENTAS'||p.category==='PUBLICITARIOS')return '¿Quieres ver para qué sirve y cómo viene? Escríbeme.';
+    return '¿Quieres conocer sus ingredientes y presentación? Escríbeme.';
+  }
+  if(p.category==='CUIDADO PERSONAL')return '¿Te comparto la etiqueta o revisamos la entrega?';
+  if(p.category==='HERRAMIENTAS'||p.category==='PUBLICITARIOS')return '¿Te muestro la presentación o revisamos la entrega?';
+  return '¿Te comparto la etiqueta o revisamos la entrega?';
 }
 function addSpotlight(copy,p,stage,variant) {
   if(!['catalogo','interes','informacion'].includes(stage))return copy;
-  // These B variants already contain their package-verified ingredient hook.
-  if(variant==='B'&&['B4-BIOLYBER-01','B4-BIOMIEL-01','B4-4DXT-XTI-01'].includes(p.id))return copy;
+  // These B variants already contain a source-attributed ingredient hook.
+  if(variant==='B'&&['B4-GANOCONGRUENCIA-01','B4-BIOLYBER-01','B4-BIOMIEL-01','B4-4DXT-XTI-01'].includes(p.id))return copy;
   const {label,text}=shareSpotlight(p);
+  if(label==='Presentación')return copy;
   // Detailed B drafts already name the ingredients. Keep them intact unless
   // there is a distinct everyday benefit to show.
-  if(variant==='B'&&label==='Ingredientes destacados')return copy;
+  if(variant==='B'&&(label==='Ingredientes según el catálogo'||(label==='Lo que destaca'&&copy.includes('🔎 Ingredientes destacados'))))return copy;
   if(copy.toLocaleLowerCase('es-MX').includes(text.toLocaleLowerCase('es-MX')))return copy;
   const lines=copy.split('\n');
-  lines.splice(1,0,`🌟 ${label}: ${text}.`);
+  lines.splice(1,0,label==='Ingredientes según el catálogo'?`🔎 ${label}: ${text}.`:`🌟 ${text}.`);
   return lines.join('\n');
 }
 export function shareFacts(p){const f=cosmeticFacts[p.id];if(!sharingEligibility(p).enabled||!f)return '';return `✨ Según el catálogo del fabricante: ${f.benefit}${f.ingredients.length?'\n🔎 Ingredientes destacados: '+f.ingredients.join(', ')+'.':''}`;}
@@ -107,6 +126,7 @@ function baseShareCopy(p,stage='interes',variant='A') {
   if(stage==='catalogo'&&variant==='B')return `🧴 ${identity}\n${shareFacts(p)}\n💰 ${price}\nConsulta la etiqueta para la composición completa. Disponibilidad y entrega por confirmar.`;
   if(stage==='interes'&&variant==='A')return `✨ ${identity}\n💰 ${price}\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.`;
   if(stage==='informacion'&&variant==='A')return `✨ Te comparto la información de ${p.name}.\n📦 Presentación: ${p.presentation}.\n💰 ${price}\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.`;
+  if(stage==='interes'&&variant==='B'&&cosmeticFacts[p.id])return `🧴 ${identity}\n✨ ${cosmeticFacts[p.id].benefit}\n${cosmeticFacts[p.id].ingredients.length?'🔎 Ingredientes destacados: '+cosmeticFacts[p.id].ingredients.join(', ')+'.\n':''}💬 ¿Quieres que te pase el precio y la información de la etiqueta?`;
   if(stage==='interes')return `${profile[variant==='B'?1:0]}\n\n${identity}\n${shareFacts(p)}\n💰 ${price}\n\n💬 ${invitation}`;
   if(stage==='informacion')return `Te comparto los datos de ${p.name}.\n📦 Presentación: ${p.presentation}.\n${shareFacts(p)}\n💰 ${price}\nConsulta la etiqueta para la lista completa y las indicaciones.\n\n💬 ${variant==='B'?'¿Qué te gustaría revisar primero: la etiqueta o la entrega?':'¿Quieres que te comparta la etiqueta para revisar sus ingredientes?'} Antes de pedir, confirmamos disponibilidad y condiciones.`;
   if(stage==='precio')return `${identity}\n💰 ${price}\nEl costo de entrega, la disponibilidad y el total se confirman antes de acordar el pedido.\n\n💬 ${variant==='B'?'¿Quieres que revise las opciones de entrega en tu localidad?':'¿Quieres que confirme cuánto sería en total con entrega?'} No hace falta compartir tu dirección completa todavía.`;
@@ -115,8 +135,12 @@ function baseShareCopy(p,stage='interes',variant='A') {
   return '';
 }
 export function makeShareCopy(p,stage='interes',variant='A') {
-  const copy=baseShareCopy(p,stage,variant);
-  return copy?addSpotlight(copy,p,stage,variant):'';
+  let copy=baseShareCopy(p,stage,variant);
+  if(!copy)return '';
+  copy=addSpotlight(copy,p,stage,variant);
+  if(variant==='A'&&stage==='interes')copy=copy.replace('¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.',questionFor(p,stage));
+  if(variant==='A'&&stage==='informacion')copy=copy.replace('¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.',`${questionFor(p,stage)} Antes de pedir, confirmamos disponibilidad y total.`);
+  return copy;
 }
 export function shareTextIssues(text) {
   const n=text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
