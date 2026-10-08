@@ -4,15 +4,15 @@ export const reviewedDrafts = {
   "B4-GANOCONGRUENCIA-01": {
     "catalogo": {
       "A": "📦 Gano Congruencia · 30 sobres, 600 g\n🌿 Reúne Bio.Con, Bio.Gru, Bio.Cia y Gano He en una fórmula 4 en 1.\n💰 Precio público: $1,857 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 Gano Congruencia · 30 sobres, 600 g\n🌿 Fórmula 4 en 1: Bio.Con, Bio.Gru, Bio.Cia y Gano He.\n🌾 El catálogo Bio4 destaca linaza, inulina y amaranto, junto con Ganoderma lucidum y melena de león.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\nConfirma disponibilidad y condiciones antes de acordar el pedido."
+      "B": "📦 Gano Congruencia · 30 sobres, 600 g\n🌾 El catálogo Bio4 destaca linaza, inulina y amaranto, junto con Ganoderma lucidum y melena de león.\n🌿 Fórmula 4 en 1: Bio.Con, Bio.Gru, Bio.Cia y Gano He.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\nConfirma disponibilidad y condiciones antes de acordar el pedido."
     },
     "interes": {
       "A": "✨ Gano Congruencia · 30 sobres, 600 g\n🌿 Combina Bio.Con, Bio.Gru, Bio.Cia y Gano He.\n💰 Precio público: $1,857 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "🌿 Gano Congruencia: Bio.Con + Bio.Gru + Bio.Cia + Gano He en sobres\n📦 30 sobres, 600 g\n🔎 Según el catálogo Bio4: linaza, inulina, amaranto, Ganoderma y melena de león.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres ver la etiqueta y la presentación? Escríbeme."
+      "B": "🌿 Gano Congruencia · 30 sobres, 600 g\n🔎 Según el catálogo Bio4: linaza, inulina, amaranto, Ganoderma y melena de león.\nBio.Con + Bio.Gru + Bio.Cia + Gano He en una fórmula 4 en 1.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres ver la etiqueta? Escríbeme."
     },
     "informacion": {
       "A": "✨ Te comparto la información de Gano Congruencia.\n🌿 Reúne Bio.Con, Bio.Gru, Bio.Cia y Gano He.\n📦 Presentación: 30 sobres, 600 g.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Gano Congruencia viene en 30 sobres (600 g).\n🌿 Combina Bio.Con, Bio.Gru, Bio.Cia y Gano He.\n🌾 El catálogo Bio4 destaca linaza, inulina, amaranto, Ganoderma lucidum y melena de león.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que te comparta la etiqueta o revisamos la entrega?"
+      "B": "¡Claro! 😊 Gano Congruencia viene en 30 sobres (600 g).\n🌾 El catálogo Bio4 destaca linaza, inulina, amaranto, Ganoderma lucidum y melena de león.\n🌿 Combina Bio.Con, Bio.Gru, Bio.Cia y Gano He.\nConsulta la etiqueta para la lista completa.\n💰 Precio público: $1,857 MXN.\n💬 ¿Quieres que te comparta la etiqueta o revisamos la entrega?"
     }
   },
   "B4-GANOCONGRUENCIA-02": {
@@ -283,16 +283,16 @@ export const reviewedDrafts = {
   },
   "B4-KENKO-TODAY-01": {
     "catalogo": {
-      "A": "📦 Kenko Today Biopack · 210 g\n💰 Precio público: $1,669 MXN.\nDisponibilidad y costo de entrega por confirmar.",
-      "B": "📦 Kenko Today Biopack · 210 g\nLa tarjeta Bio4 de este formato destaca Ganoderma, ginseng y tongkat ali; confirma la fórmula con el envase actual.\n💰 Precio público: $1,669 MXN.\nDisponibilidad y entrega por confirmar."
+      "A": "☕ Kenko Today Biopack · 210 g\n🌿 La ficha Bio4 presenta café con Ganoderma, ginseng y tongkat ali.\n💰 Precio público: $1,669 MXN.\nDisponibilidad y entrega por confirmar.",
+      "B": "☕ Kenko Today Biopack · 210 g\n🔎 Su ficha Bio4 enumera café gourmet, Ganoderma lucidum, ginseng Panax, tongkat ali, uña de gato y polisacáridos de arroz.\nConsulta la etiqueta actual para la lista completa.\n💰 Precio público: $1,669 MXN.\nDisponibilidad y entrega por confirmar."
     },
     "interes": {
-      "A": "✨ Kenko Today Biopack · 210 g\n💰 Precio público: $1,669 MXN.\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.",
-      "B": "🌿 Kenko Today Biopack · 210 g\nLa tarjeta Bio4 destaca Ganoderma, ginseng y tongkat ali.\n💬 ¿Quieres ver la información del envase actual? Escríbeme."
+      "A": "☕ Kenko Today Biopack · 210 g\n🌿 Café con Ganoderma, ginseng y tongkat ali, según su ficha Bio4.\n💬 ¿Te muestro la presentación y el precio? Escríbeme.",
+      "B": "☕ ¿Qué hace diferente a Kenko Today Biopack?\n🔎 Su ficha Bio4 destaca café, Ganoderma, ginseng y tongkat ali.\n📦 210 g · $1,669 MXN al público.\n💬 ¿Quieres ver la etiqueta actual? Escríbeme."
     },
     "informacion": {
-      "A": "✨ Te comparto la información de Kenko Today Biopack.\n📦 Presentación: 210 g.\n💰 Precio público: $1,669 MXN.\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.",
-      "B": "¡Claro! 😊 Kenko Today Biopack viene en 210 g y cuesta $1,669 MXN al público.\nSu tarjeta Bio4 destaca Ganoderma, ginseng y tongkat ali; antes de recomendarlo, revisamos la etiqueta actual.\n💬 ¿Quieres que confirme ingredientes o entrega primero?"
+      "A": "☕ Kenko Today Biopack viene en bolsa de 210 g.\n🌿 Su ficha Bio4 presenta café con Ganoderma, ginseng y tongkat ali.\n💰 Precio público: $1,669 MXN.\n💬 ¿Quieres ver la etiqueta o que confirme disponibilidad y entrega?",
+      "B": "¡Claro! 😊 Kenko Today Biopack viene en 210 g y cuesta $1,669 MXN al público.\n🔎 Su ficha Bio4 también menciona uña de gato y polisacáridos de arroz, además de café, Ganoderma, ginseng y tongkat ali.\nLa etiqueta actual confirma la lista completa.\n💬 ¿Te la comparto?"
     }
   },
   "B4-KENKO-TODAY-02": {
