@@ -91,8 +91,22 @@ const everydayHighlights = {
   'B4-VASO-KENKO-01':'Un vaso para disfrutar Kenko Café.',
   'B4-PROTECTOR-VASO-01':'Protege la mano del calor del vaso.'
 };
+const ingredientHighlights = {
+  'B4-GANODENT-01':'Sábila, caléndula, manzanilla y Ganoderma lucidum',
+  'B4-LADOUCHE-01':'Ganoderma lucidum, wild yam y ginseng',
+  'B4-LADOUCHE-02':'Ganoderma lucidum, hamamelis y romero',
+  'B4-4BELLE-01':'Rosa mosqueta, ácido hialurónico, colágeno y vitamina E',
+  'B4-GANOSUN-01':'Ganoderma lucidum',
+  'B4-SHII-TOMILLO-01':'Shiitake, tomillo y árnica',
+  'B4-4DXT-KUUL-01':'Mentol, eucalipto, árnica y aloe vera',
+  'B4-BIOCRISTAL-01':'Cristal mineral',
+  'B4-BIOCLEAN-01':'Amida de coco, hidróxido de sodio y sulfato de amonio',
+  'B4-4SAVE-01':'Zeolitas e imanes'
+};
 export function shareSpotlight(p) {
   const cosmetic=cosmeticFacts[p.id];
+  if(cosmetic?.ingredients.length)return {label:'Ingredientes del catálogo',text:cosmetic.ingredients.join(', ')};
+  if(ingredientHighlights[p.id])return {label:p.id==='B4-4SAVE-01'?'Componentes del catálogo':'Ingredientes del catálogo',text:ingredientHighlights[p.id]};
   if(cosmetic)return {label:'Beneficio de uso',text:cosmetic.benefit.replace(/\.$/,'')};
   if(everydayHighlights[p.id])return {label:'Lo que destaca',text:everydayHighlights[p.id].replace(/\.$/,'')};
   const reviewed=reviewedDrafts[p.id]?.catalogo?.B||'';
@@ -102,11 +116,14 @@ export function shareSpotlight(p) {
 }
 function questionFor(p,stage) {
   if(stage==='interes') {
-    if(p.category==='CUIDADO PERSONAL')return '¿Quieres ver sus ingredientes y cómo viene? Escríbeme.';
+    if(p.category==='CUIDADO PERSONAL')return p.ingredients||cosmeticFacts[p.id]?.ingredients.length?'¿Quieres ver sus ingredientes y cómo viene? Escríbeme.':'¿Quieres que confirme sus ingredientes y cómo se usa? Escríbeme.';
+    if(p.category==='ECOLOGÍA')return '¿Quieres conocer sus componentes y cómo se usa? Escríbeme.';
     if(p.category==='HERRAMIENTAS'||p.category==='PUBLICITARIOS')return '¿Quieres ver para qué sirve y cómo viene? Escríbeme.';
+    if(!p.ingredients)return '¿Quieres que confirme los ingredientes de esta presentación? Escríbeme.';
     return '¿Quieres conocer sus ingredientes y presentación? Escríbeme.';
   }
   if(p.category==='CUIDADO PERSONAL')return '¿Te comparto la etiqueta o revisamos la entrega?';
+  if(p.category==='ECOLOGÍA')return '¿Te comparto sus componentes o revisamos la entrega?';
   if(p.category==='HERRAMIENTAS'||p.category==='PUBLICITARIOS')return '¿Te muestro la presentación o revisamos la entrega?';
   return '¿Te comparto la etiqueta o revisamos la entrega?';
 }
@@ -118,13 +135,14 @@ function addSpotlight(copy,p,stage,variant) {
   if(label==='Presentación')return copy;
   // Detailed B drafts already name the ingredients. Keep them intact unless
   // there is a distinct everyday benefit to show.
-  if(variant==='B'&&(label==='Ingredientes según el catálogo'||(label==='Lo que destaca'&&copy.includes('🔎 Ingredientes destacados'))))return copy;
+  if(variant==='B'&&((label.startsWith('Ingredientes')&&copy.includes('🔎 Ingredientes destacados'))||label==='Ingredientes según el catálogo'||(label==='Lo que destaca'&&copy.includes('🔎 Ingredientes destacados'))))return copy;
   if(copy.toLocaleLowerCase('es-MX').includes(text.toLocaleLowerCase('es-MX')))return copy;
   const lines=copy.split('\n');
-  lines.splice(1,0,label==='Ingredientes según el catálogo'?`🔎 ${label}: ${text}.`:`🌟 ${text}.`);
+  lines.splice(1,0,label.startsWith('Ingredientes')||label==='Componentes del catálogo'?`🔎 ${label}: ${text}.`:`🌟 ${text}.`);
+  if(variant==='A'&&stage!=='catalogo'&&cosmeticFacts[p.id]?.ingredients.length)lines.splice(2,0,`✨ ${cosmeticFacts[p.id].benefit}`);
   return lines.join('\n');
 }
-export function shareFacts(p){const f=cosmeticFacts[p.id];if(!sharingEligibility(p).enabled||!f)return '';return `✨ Según el catálogo del fabricante: ${f.benefit}${f.ingredients.length?'\n🔎 Ingredientes destacados: '+f.ingredients.join(', ')+'.':''}`;}
+export function shareFacts(p){const f=cosmeticFacts[p.id];if(!sharingEligibility(p).enabled||!f)return '';return `${f.ingredients.length?'🔎 Ingredientes destacados del catálogo: '+f.ingredients.join(', ')+'.\n':''}✨ Según el catálogo del fabricante: ${f.benefit}`;}
 export function sharingEligibility(p) {
   if (p?.category === 'CUIDADO PERSONAL' && shareProfiles[p.id]) return {enabled:true,reason:'Borrador de uso cosmético. Revisa la etiqueta y las reglas aplicables antes de publicar; esto no representa una aprobación de WhatsApp.'};
   if (p?.id && reviewedDrafts[p.id]) return {enabled:true,reason:'Borrador informativo para socios. No acredita que el producto ni la actividad de la cuenta estén permitidos en WhatsApp Business. Confirma las reglas aplicables antes de publicar o enviar.'};
@@ -141,7 +159,7 @@ function baseShareCopy(p,stage='interes',variant='A') {
   if(stage==='catalogo'&&variant==='B')return `🧴 ${identity}\n${shareFacts(p)}\n💰 ${price}\nConsulta la etiqueta para la composición completa. Disponibilidad y entrega por confirmar.`;
   if(stage==='interes'&&variant==='A')return `✨ ${identity}\n💰 ${price}\n💬 ¿Te gustaría conocerlo? Escríbeme y revisamos la información, sin compromiso.`;
   if(stage==='informacion'&&variant==='A')return `✨ Te comparto la información de ${p.name}.\n📦 Presentación: ${p.presentation}.\n💰 ${price}\n💬 ¿Quieres que revisemos los detalles para ver si se ajusta a lo que buscas? Antes de pedir, confirmamos el total y las condiciones.`;
-  if(stage==='interes'&&variant==='B'&&cosmeticFacts[p.id])return `🧴 ${identity}\n✨ ${cosmeticFacts[p.id].benefit}\n${cosmeticFacts[p.id].ingredients.length?'🔎 Ingredientes destacados: '+cosmeticFacts[p.id].ingredients.join(', ')+'.\n':''}💬 ¿Quieres que te pase el precio y la información de la etiqueta?`;
+  if(stage==='interes'&&variant==='B'&&cosmeticFacts[p.id])return `🧴 ${identity}\n${cosmeticFacts[p.id].ingredients.length?'🔎 Ingredientes destacados del catálogo: '+cosmeticFacts[p.id].ingredients.join(', ')+'.\n':''}✨ ${cosmeticFacts[p.id].benefit}\n💬 ¿Quieres que te pase el precio y la información de la etiqueta?`;
   if(stage==='interes')return `${profile[variant==='B'?1:0]}\n\n${identity}\n${shareFacts(p)}\n💰 ${price}\n\n💬 ${invitation}`;
   if(stage==='informacion')return `Te comparto los datos de ${p.name}.\n📦 Presentación: ${p.presentation}.\n${shareFacts(p)}\n💰 ${price}\nConsulta la etiqueta para la lista completa y las indicaciones.\n\n💬 ${variant==='B'?'¿Qué te gustaría revisar primero: la etiqueta o la entrega?':'¿Quieres que te comparta la etiqueta para revisar sus ingredientes?'} Antes de pedir, confirmamos disponibilidad y condiciones.`;
   if(stage==='precio')return `${identity}\n💰 ${price}\nEl costo de entrega, la disponibilidad y el total se confirman antes de acordar el pedido.\n\n💬 ${variant==='B'?'¿Quieres que revise las opciones de entrega en tu localidad?':'¿Quieres que confirme cuánto sería en total con entrega?'} No hace falta compartir tu dirección completa todavía.`;
