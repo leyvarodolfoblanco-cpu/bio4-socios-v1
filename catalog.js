@@ -978,8 +978,7 @@ export const products=[
       "Regulación digestiva.",
       "Apoya las defensas naturales del organismo.",
       "Fortalecimiento de tejidos.",
-      "Equilibrio metabólico.",
-      "Aporte de fibra probiótica."
+      "Equilibrio metabólico."
     ]
   },
   {

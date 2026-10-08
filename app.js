@@ -1,4 +1,4 @@
-import {products} from './catalog.js?v=etiquetas-20261007';
+import {products} from './catalog.js?v=ceutica-20261007';
 import {objections,closings,lessons,scenarios,topics,difficulties,dimensions} from './content.js';
 import {evaluate,prospectReply,roundCount,sampleExam,shouldFinish} from './engine.js';
 import {makeShareCopy,sharingEligibility,shareStages,shareTextIssues,summarizeShareResults} from './sharing.js?v=etiquetas-20261007';
