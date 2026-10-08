@@ -1,7 +1,7 @@
 import {products} from './catalog.js?v=ceutica-20261007';
 import {objections,closings,lessons,scenarios,topics,difficulties,dimensions} from './content.js';
 import {evaluate,prospectReply,roundCount,sampleExam,shouldFinish} from './engine.js';
-import {makeShareCopy,sharingEligibility,shareStages,shareTextIssues,summarizeShareResults} from './sharing.js?v=compartir-20261007c';
+import {makeShareCopy,sharingEligibility,shareStages,shareTextIssues,summarizeShareResults} from './sharing.js?v=compartir-20261007d';
 import {productMedia} from './media.js?v=galeria-20260924';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
