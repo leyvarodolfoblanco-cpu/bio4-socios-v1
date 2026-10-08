@@ -1,5 +1,5 @@
 // Drafts for the webapp. None of these texts is a WhatsApp/Meta approval.
-import {reviewedDrafts} from './share-drafts.js?v=compartir-20261007f';
+import {reviewedDrafts} from './share-drafts.js?v=compartir-20261007g';
 export const shareProfiles = {
   'B4-SHII-MANOS-01': ['Un detalle para tu rutina de cuidado de manos.', 'Manos suaves: un pequeño detalle en tu rutina diaria.', 'MANOS'],
   'B4-SHII-SEDA-01': ['Un espacio para el cuidado corporal en tu día.', 'Dale un momento de cuidado a tu piel.', 'SEDA'],
@@ -130,7 +130,7 @@ function questionFor(p,stage) {
 function addSpotlight(copy,p,stage,variant) {
   if(!['catalogo','interes','informacion'].includes(stage))return copy;
   // These drafts already place their documented ingredients and format clearly.
-  if(['B4-KENKO-CAFE-03','B4-CEUTICA4-01'].includes(p.id))return copy;
+  if(['B4-GANOCONGRUENCIA-02','B4-KENKO-CAFE-03','B4-CEUTICA4-01'].includes(p.id))return copy;
   // These B variants already contain a source-attributed ingredient hook.
   if(variant==='B'&&['B4-GANOCONGRUENCIA-01','B4-BIOLYBER-01','B4-BIOMIEL-01','B4-4DXT-XTI-01'].includes(p.id))return copy;
   const {label,text}=shareSpotlight(p);

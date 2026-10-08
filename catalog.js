@@ -22,7 +22,7 @@ export const products=[
     "category": "SUPLEMENTOS",
     "presentation": "720 g",
     "price": 1857,
-    "ingredients": null,
+    "ingredients": "Linaza, inulina, calcio de coral, alga chlorella, tila, valeriana, Ganoderma lucidum y Hericium erinaceus (melena de león).",
     "image": "assets/B4-GANOCONGRUENCIA-02.png",
     "benefits": [
       "Equilibrio intestinal.",
