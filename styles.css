@@ -11,6 +11,8 @@
 /* Navegación y acciones rápidas de la V1 móvil */
 .mobile-nav{display:none}
 .quick-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:-4px 0 22px}
+.week-panel{margin-bottom:24px}.week-panel h2{margin:8px 0}.week-panel p{margin-bottom:8px}.week-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0}.week-action{display:flex;align-items:center;gap:10px;min-height:82px;padding:12px;border:1px solid var(--line);border-radius:11px;text-decoration:none;background:#f8faf7}.week-action>span:nth-child(2){flex:1;min-width:0}.week-action strong,.week-action small{display:block}.week-action small{font-size:12px;line-height:1.35;color:var(--muted);margin-top:4px}.week-action.done{border-color:#97bd74;background:#f0f7e8}.week-icon{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:10px;color:#fff;background:#a44422}.week-action:nth-child(2) .week-icon{background:#664583}.week-action:nth-child(3) .week-icon{background:#155a77}
+@media(max-width:1100px){.week-actions{grid-template-columns:1fr}}
 .quick-actions .btn{min-height:54px;text-align:center}
 .btn.quick-product{background:#155a77;border-color:#155a77;color:#fff}
 .btn.quick-share,.btn.share{background:#a44422;border-color:#a44422;color:#fff}
