@@ -1,5 +1,6 @@
 // Drafts for the webapp. None of these texts is a WhatsApp/Meta approval.
 import {reviewedDrafts} from './share-drafts.js?v=compartir-20261007g';
+import {productDescription} from './descriptions.js?v=20261011';
 export const shareProfiles = {
   'B4-SHII-MANOS-01': ['Un detalle para tu rutina de cuidado de manos.', 'Manos suaves: un pequeño detalle en tu rutina diaria.', 'MANOS'],
   'B4-SHII-SEDA-01': ['Un espacio para el cuidado corporal en tu día.', 'Dale un momento de cuidado a tu piel.', 'SEDA'],
@@ -244,6 +245,16 @@ function baseShareCopy(p,stage='interes',variant='A') {
   return '';
 }
 export function makeShareCopy(p,stage='interes',variant='A') {
+  if(stage==='catalogo'&&sharingEligibility(p).enabled){
+    const description=productDescription(p);
+    if(description){
+      const price=p.price===null?'Precio público por confirmar.':`Precio público: ${new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(p.price)} MXN.`;
+      const review=description.review.length?`\n🔎 ${description.review.join(' ')}`:'';
+      const body=description.body.toLocaleLowerCase('es-MX').includes(p.name.toLocaleLowerCase('es-MX'))?description.body:`${p.name}: ${description.body}`;
+      const lead=variant==='A'?`${description.hook}\n${body}`:body;
+      return `${lead}\n📦 ${p.presentation} · ${price}${review}\n💬 ${variant==='A'?'Consulta disponibilidad y entrega.':'¿Te comparto la información de esta presentación?'}`;
+    }
+  }
   let copy=baseShareCopy(p,stage,variant);
   if(!copy)return '';
   if(variant==='A'&&stage==='interes'&&benefitOpeners[p.id]) {
