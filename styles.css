@@ -82,3 +82,11 @@
   .product-actions{grid-column:1/-1;margin-top:10px}
   .product-actions .btn{min-height:44px;font-size:13px}
 }
+.progress-tracks,.progress-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:22px}
+.progress-track{text-decoration:none;color:var(--green);border-top:5px solid #155a77}
+.progress-track:nth-child(2){border-top-color:#664583}.progress-track:nth-child(3){border-top-color:#a44422}
+.progress-track strong{display:block;font-size:30px;margin:12px 0 4px}.progress-track small{color:var(--muted);line-height:1.4}
+.progress-column{border-top:5px solid #688c39}.progress-column.review{border-top-color:#155a77}.progress-column.next{border-top-color:#a44422}
+.progress-column h2{font-size:19px}.progress-column ul{list-style:none;padding:0;margin:0}.progress-column li+li{border-top:1px solid var(--line)}
+.progress-link{display:block;padding:12px 0;min-height:44px;text-decoration:none;font-weight:600;line-height:1.4}.progress-link:hover{text-decoration:underline}
+@media(max-width:900px){.progress-tracks,.progress-board{grid-template-columns:1fr}.progress-track strong{font-size:25px}}
