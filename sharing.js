@@ -1,6 +1,6 @@
 // Drafts for the webapp. None of these texts is a WhatsApp/Meta approval.
 import {reviewedDrafts} from './share-drafts.js?v=compartir-20261007g';
-import {productDescription} from './descriptions.js?v=20261011';
+import {productDescription} from './descriptions.js?v=20261012';
 export const shareProfiles = {
   'B4-SHII-MANOS-01': ['Un detalle para tu rutina de cuidado de manos.', 'Manos suaves: un pequeño detalle en tu rutina diaria.', 'MANOS'],
   'B4-SHII-SEDA-01': ['Un espacio para el cuidado corporal en tu día.', 'Dale un momento de cuidado a tu piel.', 'SEDA'],
@@ -244,6 +244,45 @@ function baseShareCopy(p,stage='interes',variant='A') {
   if(stage==='seguimiento')return `👋 Hola, retomo lo de ${p.name}, como acordamos.\n💬 ${variant==='B'?'¿Quedó alguna duda sobre la presentación o la entrega?':'¿Quieres revisar la información o prefieres dejarlo por ahora?'}\nSi ya no quieres seguimiento, dime y lo dejamos aquí.`;
   return '';
 }
+function purposeShareCopy(p,stage,variant){
+  const description=productDescription(p);
+  if(!description||!sharingEligibility(p).enabled)return '';
+  const {hook,body,review}=description;
+  const first=body.split(/(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚ])/u)[0];
+  const price=p.price===null?'Precio público por confirmar.':`Precio público: ${new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(p.price)} MXN.`;
+  const identity=`${p.name} · ${p.presentation}`;
+  if(stage==='interes'){
+    // Estado: una idea y una invitación. La versión B da el precio de entrada.
+    return variant==='A'
+      ?`${hook}\n${identity}\n💬 ${questionFor(p,'interes')}`
+      :`${first}\n📦 ${p.presentation} · ${price}\n💬 ¿Te comparto más detalles?`;
+  }
+  if(stage==='informacion'){
+    // Chat: responde a quien ya pidió información, con más contexto que un Estado.
+    const lead=variant==='A'?`${hook}\n${body}`:body;
+    const question=variant==='A'?questionFor(p,'informacion'):'¿Quieres que confirme disponibilidad y el total con entrega?';
+    return `${lead}\n📦 ${p.presentation} · ${price}${review.length?`\n🔎 ${review.join(' ')}`:''}\n💬 ${question} Antes de pedir, confirmamos las condiciones.`;
+  }
+  if(stage==='precio'){
+    // Precio: importe visible, sin prometer disponibilidad ni un costo de envío.
+    return variant==='A'
+      ?`${hook}\n${identity}\n💰 ${price}\nLa disponibilidad y la entrega se confirman antes del pedido. ¿Quieres que revise el total para ti?`
+      :`${identity}\n💰 ${price}\n${first}\n¿Te comparto las opciones de entrega? Confirmamos el total antes de decidir.`;
+  }
+  if(stage==='pedido'){
+    // Pedido: solicita permiso para revisar las condiciones, no declara una venta.
+    return variant==='A'
+      ?`📦 ${identity}\n💰 ${price}\n¿Quieres que confirme disponibilidad, entrega y total para esta presentación? Te paso los detalles antes de que decidas.`
+      :`Si ${p.name} es la opción que buscas, revisemos el siguiente paso.\n📦 ${p.presentation} · ${price}\n¿Te comparto el total y las condiciones de entrega antes de confirmar?`;
+  }
+  if(stage==='seguimiento'){
+    // Seguimiento: solo para una conversación acordada; se acepta un no.
+    return variant==='A'
+      ?`👋 Hola, retomo lo de ${p.name} como acordamos. ¿Te quedó alguna duda sobre la presentación o la entrega? Si prefieres dejarlo por ahora, está bien.`
+      :`👋 Hola, quedamos en revisar ${p.name}. ¿Quieres que confirme la información que te faltaba o prefieres que ya no dé seguimiento?`;
+  }
+  return '';
+}
 export function makeShareCopy(p,stage='interes',variant='A') {
   if(stage==='catalogo'&&sharingEligibility(p).enabled){
     const description=productDescription(p);
@@ -255,6 +294,8 @@ export function makeShareCopy(p,stage='interes',variant='A') {
       return `${lead}\n📦 ${p.presentation} · ${price}${review}\n💬 ${variant==='A'?'Consulta disponibilidad y entrega.':'¿Te comparto la información de esta presentación?'}`;
     }
   }
+  const purposeCopy=purposeShareCopy(p,stage,variant);
+  if(purposeCopy)return purposeCopy;
   let copy=baseShareCopy(p,stage,variant);
   if(!copy)return '';
   if(variant==='A'&&stage==='interes'&&benefitOpeners[p.id]) {

@@ -76,7 +76,9 @@ export function productDescription(p){
   if(!entry) return null;
   const [hook,body]=entry;
   const review=[];
-  if(!p.ingredients)review.push('Ingredientes de esta presentación por confirmar.');
+  if(!p.ingredients&&(['SUPLEMENTOS','ALIMENTOS'].includes(p.category)||(p.category==='CUIDADO PERSONAL'&&p.id!=='B4-MINICABINA-01')))review.push('Ingredientes de esta presentación por confirmar.');
+  if(p.id==='B4-BIOCRISTAL-02')review.push('Composición y compatibilidad del repuesto por confirmar.');
+  if(p.id==='B4-AHORRADOR-GASOLINA-01')review.push('Compatibilidad e instrucciones exactas por confirmar.');
   if(p.price===null)review.push('Precio público por confirmar.');
   if(p.presentation==='Consulta la presentación')review.push('Presentación exacta por confirmar.');
   return {hook,body,review};
