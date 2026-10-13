@@ -107,3 +107,11 @@
 .follow-advice{max-width:700px;padding:18px;border-radius:12px;background:#f4f8f1}
 .follow-advice .copy-box{background:#fff}
 @media(max-width:700px){.follow-choices{display:grid;grid-template-columns:1fr}.follow-choices .btn{justify-content:flex-start}.follow-row .btn{flex:1 1 auto}}
+.message-coach{max-width:980px;margin-bottom:22px;border-left:5px solid #155a77}
+.message-coach h2{margin-top:10px}
+.message-coach form{max-width:720px}
+.coach-results:not(:empty){max-width:720px;margin-top:20px;padding:20px;border-radius:12px;background:#f2f7fb}
+.coach-checks{list-style:none;padding:0;margin:14px 0;display:grid;gap:9px}
+.coach-check{display:grid;gap:4px;padding:12px 14px;border-radius:9px;background:#fff;border-left:4px solid #718a97;font-size:14px;line-height:1.5}
+.coach-check.good{border-left-color:#638943}.coach-check.review{border-left-color:#a54b25}
+.coach-next{margin:14px 0 0}

@@ -8,6 +8,7 @@ import {practiceGoal,nextPracticeStep} from './coaching.js?v=20261009b';
 import {teamSteps} from './team.js?v=20261009';
 import {productDescription} from './descriptions.js?v=20261012';
 import {weeklyPlans} from './weekly-plan.js?v=20261012';
+import {reviewMessageDraft} from './message-coach.js?v=20261013';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -131,8 +132,23 @@ function more(){
   const items=[['avance','◫','Mi avance','Lo hecho, lo pendiente y tu siguiente paso.'],['plan','▣','Plan de 7 pasos','Elige una ruta de inicio o de equipo.'],['aprender','▤','Aprender','Tu ruta de socio nuevo.'],['guias','◇','Guías de conversación','Preguntas y siguientes pasos, uno a la vez.'],['equipo','✦','Equipo','Acompaña a un socio nuevo paso a paso.'],['objeciones','☏','Objeciones','Respuestas a preguntas frecuentes.'],['cierres','✓','Cierres','Siguientes pasos sin presión.'],['oportunidad','↗','Oportunidad Bio4','Conoce el negocio.'],['seguimientos','◷','Seguimientos','Retoma conversaciones acordadas.']];
   return heading('TODAS TUS HERRAMIENTAS','Más opciones','Entra directamente a lo que necesitas.')+`<div class="more-list">${items.map(([route,icon,title,desc])=>`<a class="more-item" href="#/${route}"><span class="more-icon" aria-hidden="true">${icon}</span><span><strong>${title}</strong><small>${desc}</small></span><span aria-hidden="true">→</span></a>`).join('')}</div>`;
 }
+function messageCoachForm(){
+  return `<section class="card message-coach"><span class="eyebrow">PRACTICA CON TUS PALABRAS</span><h2>Revisa un mensaje antes de usarlo</h2><p class="muted">Escribe un borrador. Recibirás observaciones concretas para hacerlo más claro y respetuoso.</p><form id="message-coach"><div class="field"><label for="coach-context">¿Cómo comenzó la conversación?</label><select id="coach-context" name="context"><option value="sin_acuerdo">Aún no aceptó recibir información</option><option value="consulta">La persona me escribió primero</option><option value="acordado">Acordamos que le enviaría información o retomaría el tema</option></select></div><div class="field"><label for="coach-draft">Tu borrador</label><textarea id="coach-draft" name="draft" rows="5" minlength="12" maxlength="1500" required placeholder="Escribe aquí como se lo dirías tú…"></textarea></div><button class="btn" type="submit">Revisar mi mensaje →</button></form><div id="coach-results" class="coach-results" role="status" aria-live="polite"></div><p class="smallprint">El borrador se revisa en este navegador y no se guarda ni se envía. Esta herramienta detecta algunas señales de redacción; no comprueba permisos, precios, beneficios ni cumplimiento.</p></section>`;
+}
+function messageCoachFeedback(result){
+  return `<h3>Qué puedes mejorar</h3><p>${esc(result.intro)}</p>${result.checks.length?`<ul class="coach-checks">${result.checks.map(item=>`<li class="coach-check ${['good','review','neutral'].includes(item.kind)?item.kind:'neutral'}"><strong>${esc(item.title)}</strong><span>${esc(item.body)}</span></li>`).join('')}</ul>`:''}${result.next?`<p class="coach-next"><strong>Próximo paso:</strong> ${esc(result.next)}</p>`:''}`;
+}
+document.addEventListener('submit',e=>{
+  if(e.target.id!=='message-coach')return;
+  e.preventDefault();
+  const data=new FormData(e.target);
+  const feedback=reviewMessageDraft(data.get('draft'),data.get('context'));
+  $('#coach-results').innerHTML=messageCoachFeedback(feedback);
+  $('#coach-results').scrollIntoView({behavior:'smooth',block:'nearest'});
+});
 function guidesPage(){
   return heading('VENDER CON AYUDA','Guías de conversación','Elige el momento en que estás. Toma una pregunta útil, escucha la respuesta y decide el siguiente paso sin presión.')+
+    messageCoachForm()+
     `<nav class="guide-jumps" aria-label="Ir a un paso de conversación">${conversationGuides.map(g=>`<button type="button" data-guide-jump="${g.id}">${g.step} · ${g.short}</button>`).join('')}</nav><div class="guide-list">${conversationGuides.map(g=>`<article class="card guide-card" id="guia-${g.id}"><div class="guide-head"><span class="guide-step">${g.step}</span><div><span class="eyebrow">CUÁNDO USARLA</span><h2>${g.title}</h2><p class="muted">${g.moment}</p></div></div><div class="guide-details"><div class="guide-prompt"><span class="eyebrow">PREGUNTA ÚTIL</span><p>${g.ask}</p></div><div><strong>Escucha</strong><p>${g.listen}</p></div><div><strong>Evita</strong><p>${g.avoid}</p></div><div><strong>Siguiente paso</strong><p>${g.next}</p></div></div><button class="btn secondary" data-start="${g.practice}">Practicar un caso relacionado →</button></article>`).join('')}</div><div class="notice">Estas guías no envían mensajes. En WhatsApp, conversa solo con personas que aceptaron recibir información y respeta si no desean continuar. <a href="https://business.whatsapp.com/policy/preview?lang=es_LA" target="_blank" rel="noopener">Consulta la política de WhatsApp Business</a>.</div>`;
 }
 function teamPage(){
