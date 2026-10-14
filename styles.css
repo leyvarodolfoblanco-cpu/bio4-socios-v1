@@ -115,3 +115,16 @@
 .coach-check{display:grid;gap:4px;padding:12px 14px;border-radius:9px;background:#fff;border-left:4px solid #718a97;font-size:14px;line-height:1.5}
 .coach-check.good{border-left-color:#638943}.coach-check.review{border-left-color:#a54b25}
 .coach-next{margin:14px 0 0}
+.state-intro{max-width:980px;margin-bottom:22px;background:#f1f7ef;border-top:5px solid #476d36}
+.state-intro h2{margin:8px 0}.state-intro .progress{margin:16px 0 10px}
+.state-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:980px;margin-bottom:22px}
+.state-card{border-left:5px solid #a44422;display:flex;flex-direction:column;gap:12px}
+.state-card:nth-child(2){border-left-color:#155a77}.state-card:nth-child(3){border-left-color:#664583}.state-card:nth-child(4){border-left-color:#476d36}
+.state-card.completed{background:#f8fbf6;border-left-color:#688c39}
+.state-head{display:flex;align-items:flex-start;gap:12px}.state-head h2{margin:4px 0 0;font-size:21px}
+.state-number{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:11px;background:#f4e9dc;color:#8a3e17;font-weight:800;font-size:18px}
+.state-card.completed .state-number{background:#e1edd7;color:#315b27}
+.state-card>p{margin:0;line-height:1.55}.state-care{padding:12px;border-radius:10px;background:#fff4eb;font-size:14px}
+.state-actions{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:auto;padding-top:4px}
+.state-actions label{display:flex;align-items:center;gap:8px;min-height:44px;cursor:pointer;font-size:14px}
+@media(max-width:800px){.state-list{grid-template-columns:1fr}.state-actions .btn{width:100%}.state-intro .btn{width:100%}}
