@@ -136,3 +136,13 @@
 .feedback-preview{max-width:1060px;margin-top:18px;border-left:5px solid #476d36}.feedback-preview .copy-box{white-space:pre-wrap;overflow-wrap:anywhere}
 .feedback-actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.feedback-actions .btn{min-height:48px}
 @media(max-width:760px){.feedback-layout,.feedback-fields{grid-template-columns:1fr}.feedback-actions .btn{width:100%}}
+.learn-video-callout{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;background:#edf5fa;border-left:5px solid #155a77}
+.learn-video-callout h2{font-size:20px;margin:7px 0}.learn-video-callout p{margin:0}
+.video-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:1060px;margin:22px 0}
+.video-card{display:flex;flex-direction:column;gap:12px;border-top:5px solid #155a77}.video-card:nth-child(2){border-top-color:#664583}.video-card:nth-child(3){border-top-color:#476d36}
+.video-head{display:flex;align-items:flex-start;gap:12px}.video-head h2{font-size:21px;margin:5px 0 0}.video-number{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:10px;background:#eaf2f7;color:#155a77;font-weight:800}
+.video-card>p{margin:0;line-height:1.5}.video-frame{position:relative;aspect-ratio:16/9;background:linear-gradient(145deg,#123f38,#155a77);border-radius:12px;overflow:hidden}
+.video-frame iframe{border:0;width:100%;height:100%}.video-play{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:100%;height:100%;border:0;background:transparent;color:#fff;cursor:pointer;font:inherit}
+.video-play span{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#fff;color:#123f38;font-size:25px;padding-left:3px}.video-play:hover,.video-play:focus-visible{background:#ffffff18}
+.video-action{padding:12px;border-radius:10px;background:#f1f7ef;font-size:14px}.video-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}.video-links .btn{min-height:44px}
+@media(max-width:800px){.video-list{grid-template-columns:1fr}.learn-video-callout{flex-direction:column;align-items:stretch}.learn-video-callout .btn,.video-links .btn{width:100%}}
