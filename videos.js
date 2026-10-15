@@ -1,5 +1,23 @@
-// Recursos externos del canal verificado de WhatsApp. No son capacitación ni aval de Bio4.
+// Recursos externos de WhatsApp y del canal Bio4 México Oficial.
 export const learningVideos=[
+  {
+    id:'WESnkQ3i90Q',
+    title:'Tu tienda virtual: vende digitalmente con Bio4',
+    source:'Bio4 México Oficial · Dra. Esmeralda Rubalcava · 2026',
+    group:'bio4',
+    description:'Una charla de Universidad Bio4 sobre cómo presentar la tienda virtual a las personas interesadas.',
+    action:'Abre tu enlace de tienda y comprueba que puedas explicar cómo encontrar un producto y consultar su precio.',
+    route:'productos',button:'Revisar productos'
+  },
+  {
+    id:'CGwGiJgbZHc',
+    title:'Vende por WhatsApp Business',
+    source:'Bio4 México Oficial · Dra. Esmeralda Rubalcava · 2026',
+    group:'bio4',
+    description:'Una sesión de Universidad Bio4 dedicada a conversar y vender mediante WhatsApp Business.',
+    action:'Prepara una respuesta breve para alguien que ya te pidió información y practica un seguimiento acordado.',
+    route:'seguimientos',button:'Ver seguimientos'
+  },
   {
     id:'AibyoyBivGw',
     title:'Conceptos básicos de WhatsApp Business',
