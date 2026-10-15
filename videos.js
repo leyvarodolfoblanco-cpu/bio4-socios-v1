@@ -1,6 +1,15 @@
 // Recursos externos de WhatsApp y del canal Bio4 México Oficial.
 export const learningVideos=[
   {
+    id:'o1LWCtBQ9YQ',
+    title:'Ganocongruencia: La base del equilibrio en todo tu cuerpo.',
+    source:'Bio4 México Oficial · Dr. Pedro Alonso Rubalcava · 2026',
+    group:'bio4',
+    description:'Charla de Universidad Bio4 dedicada a Gano Congruencia y a la explicación del producto por parte de la empresa.',
+    action:'Consulta la ficha vigente y distingue los datos del producto de las afirmaciones expuestas en la charla.',
+    route:'productos/B4-GANOCONGRUENCIA-01',button:'Ver ficha de Gano Congruencia'
+  },
+  {
     id:'WESnkQ3i90Q',
     title:'Tu tienda virtual: vende digitalmente con Bio4',
     source:'Bio4 México Oficial · Dra. Esmeralda Rubalcava · 2026',

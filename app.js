@@ -11,7 +11,7 @@ import {weeklyPlans} from './weekly-plan.js?v=20261014';
 import {reviewMessageDraft} from './message-coach.js?v=20261013';
 import {stateSteps} from './state-guide.js?v=20261014';
 import {feedbackKinds,feedbackAreas,feedbackMessage} from './feedback.js?v=20261014';
-import {learningVideos} from './videos.js?v=20261014-bio4';
+import {learningVideos} from './videos.js?v=20261015-bio4';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -181,7 +181,7 @@ function videosPage(){
   const cards=videos=>`<div class="video-list">${videos.map((video,i)=>`<article class="card video-card"><div class="video-head"><span class="video-number">${i+1}</span><div><span class="eyebrow">${esc(video.source)}</span><h2>${esc(video.title)}</h2></div></div><p>${esc(video.description)}</p><div class="video-frame" data-video-frame="${video.id}"><button class="video-play" type="button" data-play-video="${video.id}" aria-label="Reproducir ${esc(video.title)} aquí"><span aria-hidden="true">▶</span><strong>Ver video aquí</strong></button></div><p class="video-action"><strong>Después de verlo:</strong> ${esc(video.action)}</p><div class="video-links"><a class="btn secondary" href="https://www.youtube.com/watch?v=${video.id}" target="_blank" rel="noopener">Abrir en YouTube ↗</a>${link(video.route,esc(video.button)+' →','btn ghost')}</div></article>`).join('')}</div>`;
   return heading('MIRA · PRUEBA · PRACTICA','Videos útiles','Aprende una idea y aplícala en tu trabajo diario.')+
     `<div class="notice">Las charlas de Bio4 son material de capacitación externo. Ver un video no valida precios, afirmaciones sobre productos o resultados de negocio. Comprueba la información vigente antes de compartirla. Los tutoriales de WhatsApp muestran pantallas que pueden haber cambiado.</div>`+
-    `<div class="section-line"><h2>Aprende con Bio4</h2><span class="tag">Dra. Esmeralda Rubalcava</span></div>${cards(learningVideos.filter(v=>v.group==='bio4'))}`+
+    `<div class="section-line"><h2>Aprende con Bio4</h2><span class="tag">Universidad Bio4</span></div>${cards(learningVideos.filter(v=>v.group==='bio4'))}`+
     `<div class="section-line"><h2>Herramientas de WhatsApp Business</h2></div>${cards(learningVideos.filter(v=>v.group!=='bio4'))}`+
     `<p class="smallprint">Reproducir un video carga el reproductor de YouTube. La webapp no registra lo que ves ni marca una lección como completada.</p>`;
 }
