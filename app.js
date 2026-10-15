@@ -11,7 +11,7 @@ import {weeklyPlans} from './weekly-plan.js?v=20261014';
 import {reviewMessageDraft} from './message-coach.js?v=20261013';
 import {stateSteps} from './state-guide.js?v=20261014';
 import {feedbackKinds,feedbackAreas,feedbackMessage} from './feedback.js?v=20261014';
-import {learningVideos} from './videos.js?v=20261015-bio4';
+import {learningVideos} from './videos.js?v=20261015-bio4-biblioteca';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();

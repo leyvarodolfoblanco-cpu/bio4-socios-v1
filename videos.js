@@ -1,6 +1,24 @@
 // Recursos externos de WhatsApp y del canal Bio4 México Oficial.
 export const learningVideos=[
   {
+    id:'bJfKsMx35yA',
+    title:'Tu biblioteca Bio4, todo lo que necesitas de tu negocio en tu celular.',
+    source:'Bio4 México Oficial · Universidad Bio4 · 2026',
+    group:'bio4',
+    description:'Conoce la biblioteca de materiales de Bio4 y cómo encontrar recursos para tu trabajo desde el celular.',
+    action:'Localiza el catálogo y una ficha de producto en la biblioteca. Comprueba su fecha antes de utilizarlos.',
+    route:'productos',button:'Explorar productos'
+  },
+  {
+    id:'pnADDQRvydQ',
+    title:'3 actividades elementales para crecer en Bio4.',
+    source:'Bio4 México Oficial · Universidad Bio4 · Episodio 35',
+    group:'bio4',
+    description:'Una sesión de capacitación para reflexionar sobre las actividades de tu negocio y organizar tus siguientes pasos.',
+    action:'Elige una actividad de la charla y conviértela en una tarea concreta y alcanzable para esta semana.',
+    route:'plan',button:'Abrir mi plan de 7 pasos'
+  },
+  {
     id:'o1LWCtBQ9YQ',
     title:'Ganocongruencia: La base del equilibrio en todo tu cuerpo.',
     source:'Bio4 México Oficial · Dr. Pedro Alonso Rubalcava · 2026',
