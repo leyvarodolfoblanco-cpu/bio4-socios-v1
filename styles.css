@@ -159,3 +159,7 @@
 .plan-step[id^=secuencia]{scroll-margin-top:24px}
 .plan-step[id^=secuencia] details{margin:14px 0;padding:14px;background:#f4f7f6;border-radius:10px}
 @media(max-width:800px){.sequence-vision{grid-template-columns:1fr}.sequence-dream img{height:190px}.sequence-example .btn{width:100%}}
+
+.daily-next{margin:20px 0;border-top:5px solid #598123;background:#edf5e6}.personal-week-summary{display:flex;gap:20px;justify-content:space-between;align-items:center;margin-bottom:24px;background:#edf5fa;border-left:5px solid #155a77}.week-editor{margin-top:24px}.week-task-fields{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:16px;margin:18px 0}.week-editor details{margin:14px 0}.personal-week-summary h2{font-size:22px}@media(max-width:800px){.personal-week-summary{flex-direction:column;align-items:stretch}.week-task-fields{grid-template-columns:1fr}.daily-next .btn{width:100%}}
+
+@media(max-width:800px){.week-task-list{grid-template-columns:1fr}}

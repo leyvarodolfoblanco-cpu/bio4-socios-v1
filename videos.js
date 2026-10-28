@@ -1,6 +1,20 @@
 // Recursos externos de WhatsApp y del canal Bio4 México Oficial.
 export const learningVideos=[
   {
+    id:'2fVXFnodgCE',title:'5 pasos para contar tu historia',
+    source:'Bio4 México Oficial · Esmeralda Rubalcava · Mamni 2024',group:'bio4',
+    description:'Una charla para preparar la manera en que cuentas tu trayectoria y tu relación con el proyecto.',
+    action:'Escribe una presentación breve con hechos de tu experiencia. Distingue lo que has vivido de lo que esperas lograr.',
+    route:'guias',button:'Preparar mi conversación'
+  },
+  {
+    id:'zWSShZoJ-Hk',title:'Todas las formas de hacer pedido con Bio4.',
+    source:'Bio4 México Oficial · Universidad Bio4 · Episodio 32',group:'bio4',
+    description:'Capacitación de la empresa sobre sus opciones para realizar pedidos.',
+    action:'Revisa cuál opción utilizas y confirma los pasos, precios y condiciones vigentes antes de acordar un pedido.',
+    route:'productos',button:'Consultar productos'
+  },
+  {
     id:'bJfKsMx35yA',
     title:'Tu biblioteca Bio4, todo lo que necesitas de tu negocio en tu celular.',
     source:'Bio4 México Oficial · Universidad Bio4 · 2026',
@@ -70,3 +84,7 @@ export const learningVideos=[
     route:'seguimientos',button:'Ver seguimientos'
   }
 ];
+
+export const videoCategories=['Primeros pasos','Productos y pedidos','Conversaciones y negocio','Herramientas digitales'];
+const categories={bJfKsMx35yA:'Primeros pasos',pnADDQRvydQ:'Primeros pasos',o1LWCtBQ9YQ:'Productos y pedidos','zWSShZoJ-Hk':'Productos y pedidos','2fVXFnodgCE':'Conversaciones y negocio',CGwGiJgbZHc:'Conversaciones y negocio'};
+export const videoCategory=video=>categories[video.id]||'Herramientas digitales';

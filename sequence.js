@@ -6,7 +6,7 @@ export const sequenceSteps=[
   ['Acción','Hago una invitación clara','Elige producto, negocio o presentación del plan. Explica brevemente el motivo y permite que la persona decida.','Adapté una invitación al interés de la persona y al canal.','videos','Ver capacitación'],
   ['Acción','Presento y respondo','Explica qué es, para quién puede ser interesante y cuáles son los datos disponibles. Pregunta qué duda quedó. No conviertas una experiencia propia en una promesa.','Ensayé una explicación y una respuesta de precio u objeción.','practicar','Ir al simulador'],
   ['Acción','Doy seguimiento','Retoma lo acordado con una razón útil. Acuerden cuándo volver a hablar. Acepta un no sin discutir y evita mensajes repetidos sin respuesta.','Practiqué un seguimiento y cómo cerrar el tema con respeto.','seguimientos','Organizar seguimientos'],
-  ['Evolución','Reviso mi avance','Revisa qué hiciste, qué aprendiste y qué cambiarás. Horas de práctica con atención y retroalimentación desarrollan habilidades; sumar horas por sí solo no garantiza resultados.','Registré mi revisión semanal y elegí una mejora.','avance','Ver todos mis avances'],
+  ['Evolución','Reviso mi avance','Revisa qué hiciste, qué aprendiste y qué cambiarás. Horas de práctica con atención y retroalimentación desarrollan habilidades; sumar horas por sí solo no garantiza resultados.','Registré mi revisión semanal y elegí una mejora.','semana','Abrir mi semana'],
   ['Evolución','Acompaño a otro socio','Escucha sus motivos, revisen una ficha, ensayen juntos y deja que lo haga con sus palabras. Acuerden la próxima revisión.','Ensayé cómo acompañar a un socio sin imponerle mi ritmo.','equipo','Abrir ruta de equipo']
 ];
 const openings=[
