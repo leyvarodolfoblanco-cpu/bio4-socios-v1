@@ -167,3 +167,5 @@
 .favorite-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.favorite-button{margin:8px 0}.favorite-button[aria-pressed=true]{background:#fff0bf;color:#624500;border-color:#c89924}.daily-followups{margin:20px 0;border-top:5px solid #d99b31}.daily-follow-row{padding:16px 0;border-bottom:1px solid var(--line)}.daily-follow-row p{margin:6px 0;overflow-wrap:anywhere}.daily-followups details{margin:18px 0}.video-card[id]{scroll-margin-top:20px}@media(max-width:800px){.favorite-actions .btn{flex:1 1 160px}.favorite-button{min-height:44px}}
 
 .story-section{margin-top:24px}.story-section textarea,[data-story-field]{width:100%;margin-top:8px}#story-clock{font-size:40px;color:var(--green);font-variant-numeric:tabular-nums}#story-review li{margin:10px 0}
+
+.challenge-list{display:grid;gap:24px;margin:24px 0}.challenge-list li{margin:12px 0}.challenge-list .field{margin-top:20px}.challenge-list textarea{width:100%}
