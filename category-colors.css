@@ -1,0 +1,31 @@
+/* Category names, numbers and selection states remain visible alongside color. */
+:is(.action-card,.more-item,.sidebar nav a){--category-ink:#15576a;--category-soft:#e6f3f8}
+:is(.action-card,.more-item,.sidebar nav a):is([href='#/productos'],[href='#/compartir'],[href='#/estados']){--category-ink:#146347;--category-soft:#e4f5e9}
+:is(.action-card,.more-item,.sidebar nav a):is([href='#/aprender'],[href='#/videos'],[href='#/lecturas'],[href='#/historia']){--category-ink:#5b388a;--category-soft:#f0e9fa}
+:is(.action-card,.more-item,.sidebar nav a):is([href='#/practicar'],[href='#/retos'],[href='#/objeciones'],[href='#/cierres'],[href='#/guias']){--category-ink:#914117;--category-soft:#fff0df}
+:is(.action-card,.more-item,.sidebar nav a):is([href='#/seguimientos'],[href='#/semana'],[href='#/plan']){--category-ink:#155d83;--category-soft:#e6f2fc}
+:is(.action-card,.more-item,.sidebar nav a):is([href='#/favoritos'],[href='#/campanas'],[href='#/oportunidad']){--category-ink:#855611;--category-soft:#fff3cb}
+:is(.action-card,.more-item,.sidebar nav a):is([href='#/equipo'],[href='#/secuencia'],[href='#/avance']){--category-ink:#86405d;--category-soft:#fbeaf1}
+.action-card{border-top:5px solid var(--category-ink)}
+.action-card .tile-icon,.more-item .more-icon,.sidebar nav a .nav-icon{background:var(--category-soft);color:var(--category-ink);border-radius:10px}
+.sidebar nav a .nav-icon{display:grid;place-items:center;min-width:30px;height:30px}
+.more-item{border-left:4px solid var(--category-ink)}
+.category-chip{--chip-ink:#235260;--chip-soft:#e7f2f6;background:var(--chip-soft);color:var(--chip-ink);border:2px solid var(--chip-ink)}
+.category-chip[data-category='SUPLEMENTOS']{--chip-ink:#5b388a;--chip-soft:#f0e9fa}
+.category-chip[data-category='ALIMENTOS']{--chip-ink:#874615;--chip-soft:#fff0dc}
+.category-chip[data-category='CUIDADO PERSONAL']{--chip-ink:#8a345e;--chip-soft:#fcebf4}
+.category-chip[data-category='ECOLOGÍA']{--chip-ink:#146347;--chip-soft:#e4f5e9}
+.category-chip[data-category='Material para socios']{--chip-ink:#155d83;--chip-soft:#e6f2fc}
+.category-chip:hover:not(.active){background:var(--chip-soft);box-shadow:0 0 0 2px var(--chip-ink)}
+.category-chip.active{background:var(--chip-ink);border-color:var(--chip-ink);color:#fff;text-decoration:underline;text-underline-offset:4px}
+:is(.guide-jumps [data-seq-jump],.plan-step[id^='secuencia-paso-']){--stage-ink:#155d83;--stage-soft:#e6f2fc}
+:is([data-seq-jump='1'],[data-seq-jump='2'],#secuencia-paso-1,#secuencia-paso-2){--stage-ink:#5b388a!important;--stage-soft:#f0e9fa!important}
+:is([data-seq-jump='3'],[data-seq-jump='4'],[data-seq-jump='5'],#secuencia-paso-3,#secuencia-paso-4,#secuencia-paso-5){--stage-ink:#914117!important;--stage-soft:#fff0df!important}
+:is([data-seq-jump='6'],[data-seq-jump='7'],#secuencia-paso-6,#secuencia-paso-7){--stage-ink:#146347!important;--stage-soft:#e4f5e9!important}
+.guide-jumps [data-seq-jump]{background:var(--stage-soft);border:2px solid var(--stage-ink);color:var(--stage-ink)}
+.guide-jumps [data-seq-jump]:hover{box-shadow:0 0 0 2px var(--stage-ink)}
+.plan-step[id^='secuencia-paso-']{border-top:5px solid var(--stage-ink)}
+.plan-step[id^='secuencia-paso-'] .plan-number{background:var(--stage-ink);color:white}
+.plan-step[id^='secuencia-paso-'] .plan-head .eyebrow{color:var(--stage-ink)}
+
+.plan-step[id^='secuencia-paso-']{border-left-color:var(--stage-ink)}
