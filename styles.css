@@ -169,3 +169,5 @@
 .story-section{margin-top:24px}.story-section textarea,[data-story-field]{width:100%;margin-top:8px}#story-clock{font-size:40px;color:var(--green);font-variant-numeric:tabular-nums}#story-review li{margin:10px 0}
 
 .challenge-list{display:grid;gap:24px;margin:24px 0}.challenge-list li{margin:12px 0}.challenge-list .field{margin-top:20px}.challenge-list textarea{width:100%}
+
+.campaign-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.campaign-fields select,.campaign-fields input,.campaign-output textarea,.campaign-slide input,.campaign-slide textarea{width:100%}.campaign-output{margin:24px 0}.campaign-output textarea{margin:10px 0}.campaign-output li{margin:12px 0}.campaign-slides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}.campaign-slide{padding:20px;background:#edf4ef;border:1px solid var(--line);border-radius:14px;min-width:0}.campaign-slide label{display:block;margin:12px 0 6px}@media(max-width:800px){.campaign-fields,.campaign-slides{grid-template-columns:1fr}}

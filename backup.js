@@ -1,3 +1,4 @@
+import {sanitizeCampaign} from './campaigns.js?v=20261029';
 // Personal progress only. Imports create a separate profile, never replace one.
 const MAX_BYTES=8*1024*1024;
 const object=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
@@ -15,6 +16,7 @@ function profile(raw){
  p.story={};for(const k of ['who','why','experience','next'])p.story[k]=text(raw.story?.[k],350);p.story.draft=text(raw.story?.draft,1800);p.story.reflection=text(raw.story?.reflection,500);p.story.reviewed=raw.story?.reviewed===true;if(Number.isFinite(raw.story?.lastSeconds)&&raw.story.lastSeconds>=0)p.story.lastSeconds=Math.min(86400,Math.round(raw.story.lastSeconds));
  p.actionWeeks={};if(object(raw.actionWeeks))for(const [key,w] of Object.entries(raw.actionWeeks).slice(-520)){if(!date(key)||!object(w))continue;p.actionWeeks[key]={tasks:(Array.isArray(w.tasks)?w.tasks:[]).slice(0,3).filter(t=>object(t)&&typeof t.text==='string').map(t=>({text:text(t.text,160),date:date(t.date),done:t.done===true})),review:text(w.review,700)};}
  p.challengeWeeks={};if(object(raw.challengeWeeks))for(const [key,w] of Object.entries(raw.challengeWeeks).slice(-520)){if(!date(key)||!object(w))continue;p.challengeWeeks[key]={};for(const id of ['producto','objecion','estado'])p.challengeWeeks[key][id]={done:w[id]?.done===true,reflection:text(w[id]?.reflection,700)};}
+ const campaign=sanitizeCampaign(raw.campaign);if(campaign)p.campaign=campaign;
  return p;
 }
 function events(raw){if(!Array.isArray(raw))throw Error('El historial del respaldo no es válido.');return raw.slice(0,50000).filter(e=>object(e)&&typeof e.type==='string'&&Number.isFinite(Date.parse(e.at))).map(e=>{const out={};for(const k of ['id','at','type','item','scenario','difficulty','practice','mode','variant','stage','outcome'])if(typeof e[k]==='string')out[k]=text(e[k],120);if(Array.isArray(e.scores)&&e.scores.length===5&&e.scores.every(n=>Number.isFinite(n)&&n>=0&&n<=100))out.scores=[...e.scores];if(Number.isFinite(e.score)&&e.score>=0&&e.score<=100)out.score=e.score;return out;});}
