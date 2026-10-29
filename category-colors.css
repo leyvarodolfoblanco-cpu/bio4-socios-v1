@@ -29,3 +29,12 @@
 .plan-step[id^='secuencia-paso-'] .plan-head .eyebrow{color:var(--stage-ink)}
 
 .plan-step[id^='secuencia-paso-']{border-left-color:var(--stage-ink)}
+
+.tool-category-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 26px}.tool-group{margin:28px 0}.tool-group>h2{margin-bottom:16px}.start-here{background:#f0e9fa;border-top:6px solid #5b388a;margin-bottom:20px}.tool-category,.tool-group .action-card{--group-ink:#15576a;--group-soft:#e6f3f8}[data-tool-group=primeros]{--group-ink:#5b388a!important;--group-soft:#f0e9fa!important}[data-tool-group=productos]{--group-ink:#146347!important;--group-soft:#e4f5e9!important}[data-tool-group=herramientas]{--group-ink:#155d83!important;--group-soft:#e6f2fc!important}[data-tool-group=aprender]{--group-ink:#914117!important;--group-soft:#fff0df!important}[data-tool-group=equipo]{--group-ink:#855611!important;--group-soft:#fff3cb!important}[data-tool-group=testimonios]{--group-ink:#86405d!important;--group-soft:#fbeaf1!important}.tool-category{border:2px solid var(--group-ink)!important;color:var(--group-ink)!important;background:var(--group-soft)!important}.tool-category.selected{background:var(--group-ink)!important;color:white!important;text-decoration:underline;text-underline-offset:4px}.tool-group .action-card{border-color:var(--group-ink)}.tool-group .tile-icon{background:var(--group-soft);color:var(--group-ink)}.tool-group .action-card p{color:#40574e}@media(max-width:800px){.tool-category{flex:1 1 145px}.start-here .btn{width:100%}}
+
+.sidebar nav a[href='#/mas/primeros']{--category-ink:#5b388a;--category-soft:#f0e9fa}
+.sidebar nav a[href='#/mas/productos']{--category-ink:#146347;--category-soft:#e4f5e9}
+.sidebar nav a[href='#/mas/herramientas']{--category-ink:#155d83;--category-soft:#e6f2fc}
+.sidebar nav a[href='#/mas/aprender']{--category-ink:#914117;--category-soft:#fff0df}
+.sidebar nav a[href='#/mas/equipo']{--category-ink:#855611;--category-soft:#fff3cb}
+.sidebar nav a[href='#/mas/testimonios']{--category-ink:#86405d;--category-soft:#fbeaf1}
