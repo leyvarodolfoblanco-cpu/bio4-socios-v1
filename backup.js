@@ -1,4 +1,4 @@
-import {sanitizeCampaign} from './campaigns.js?v=20261029';
+import {sanitizeCampaign} from './campaigns.js?v=20261029b';
 // Personal progress only. Imports create a separate profile, never replace one.
 const MAX_BYTES=8*1024*1024;
 const object=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
