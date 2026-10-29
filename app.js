@@ -1,4 +1,4 @@
-import {campaignPage,bindCampaigns} from './campaigns.js?v=20261029c';
+import {campaignPage,bindCampaigns} from './campaigns.js?v=20261029d';
 import {challengePage,bindChallenges} from './challenges.js?v=20261029';
 import {backupPage,bindBackup} from './backup.js?v=20261029c';
 import {storyPage,bindStory} from './my-story.js?v=20261028';
