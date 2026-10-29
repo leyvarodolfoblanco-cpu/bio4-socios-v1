@@ -1,5 +1,5 @@
 import {booksPage} from './books.js?v=20261028';
-import {dailyHome,myWeekPage,bindMyWeek} from './my-week.js?v=20261028';
+import {dailyHome,myWeekPage,bindMyWeek} from './my-week.js?v=20261028b';
 import {sequencePage,sequenceCompleted,sequenceSteps,bindSequence} from './sequence.js?v=20261028b';
 import {products} from './catalog.js?v=formula-hogar-20261007';
 import {objections,closings,lessons,scenarios,topics,difficulties,dimensions} from './content.js';
@@ -32,7 +32,7 @@ function readyImageButtons(){document.querySelectorAll('[data-share-image]').for
 const uid=()=>crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2);
 const user=()=>db.users[db.current];
 function toast(t){$('#toast').textContent=t;$('#toast').classList.add('show');clearTimeout(timer);timer=setTimeout(()=>$('#toast').classList.remove('show'),3500);}
-function save(){try{localStorage.setItem(key,JSON.stringify(db));storageOk=true;}catch{storageOk=false;toast('No se pudo guardar. Conserva esta ventana abierta y exporta tus datos desde Administración.');}}
+function save(){try{localStorage.setItem(key,JSON.stringify(db));storageOk=true;}catch{storageOk=false;toast('No se pudo guardar. Conserva esta ventana abierta y copia tus notas importantes antes de recargar.');}}
 function event(type,detail={}){db.events.push({id:uid(),at:new Date().toISOString(),user:db.current,type,...detail});save();}
 const link=(route,text,cls='btn')=>`<a class="${cls}" href="#/${route}">${text}</a>`;
 const heading=(eyebrow,title,desc='')=>`<div class="page-heading"><span class="eyebrow">${eyebrow}</span><h1 tabindex="-1">${title}</h1>${desc?`<p class="muted">${desc}</p>`:''}</div>`;
