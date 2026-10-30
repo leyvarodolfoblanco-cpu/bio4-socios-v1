@@ -1,4 +1,5 @@
-import {sanitizeCampaign} from './campaigns.js?v=20261029d';
+import {sanitizeOpportunities} from './opportunities.js?v=20261029';
+import {sanitizeCampaign} from './campaigns.js?v=20261029e';
 // Personal progress only. Imports create a separate profile, never replace one.
 const MAX_BYTES=8*1024*1024;
 const object=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
@@ -8,7 +9,7 @@ const date=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)?x:'';
 function profile(raw){
  if(!object(raw)||typeof raw.name!=='string'||!raw.name.trim()||!Array.isArray(raw.lessons)||!Array.isArray(raw.followups))throw Error('El archivo no contiene un perfil de progreso válido.');
  const p={name:raw.name.trim().slice(0,60),lessons:indices(raw.lessons,6),followups:[],practice:null,exam:null,teamSteps:indices(raw.teamSteps,20),statePrep:indices(raw.statePrep,4)};
- p.followups=raw.followups.slice(0,3000).filter(f=>object(f)&&date(f.date)&&typeof f.contact==='string'&&typeof f.note==='string').map((f,i)=>({id:text(f.id,100)||'restored-'+i,contact:text(f.contact,120),note:text(f.note,1000),date:f.date,done:f.done===true}));
+ p.followups=raw.followups.slice(0,3000).filter(f=>object(f)&&date(f.date)&&typeof f.contact==='string'&&typeof f.note==='string').map((f,i)=>({id:typeof f.id==='string'&&/^[A-Za-z0-9_-]{1,100}$/.test(f.id)?f.id:'restored-'+i,contact:text(f.contact,120),note:text(f.note,1000),date:f.date,done:f.done===true,opportunityId:typeof f.opportunityId==='string'&&/^[A-Za-z0-9_-]{1,100}$/.test(f.opportunityId)?f.opportunityId:'',cancelled:f.cancelled===true}));
  p.favorites=[...new Set((Array.isArray(raw.favorites)?raw.favorites:[]).filter(x=>typeof x==='string'&&/^(producto|objeciones|cierres|video):[\w-]+$/.test(x)))].slice(0,1000);
  p.weeklyTrack=['inicio','equipo'].includes(raw.weeklyTrack)?raw.weeklyTrack:'inicio';p.weeklyPlan={};for(const k of ['inicio','equipo'])p.weeklyPlan[k]=indices(raw.weeklyPlan?.[k],7);
  p.sequence={done:indices(raw.sequence?.done,8)};for(const k of ['purpose','goal','time','dream0','dream1','dream2','experience','review','next'])p.sequence[k]=text(raw.sequence?.[k],500);
@@ -17,6 +18,7 @@ function profile(raw){
  p.actionWeeks={};if(object(raw.actionWeeks))for(const [key,w] of Object.entries(raw.actionWeeks).slice(-520)){if(!date(key)||!object(w))continue;p.actionWeeks[key]={tasks:(Array.isArray(w.tasks)?w.tasks:[]).slice(0,3).filter(t=>object(t)&&typeof t.text==='string').map(t=>({text:text(t.text,160),date:date(t.date),done:t.done===true})),review:text(w.review,700)};}
  p.challengeWeeks={};if(object(raw.challengeWeeks))for(const [key,w] of Object.entries(raw.challengeWeeks).slice(-520)){if(!date(key)||!object(w))continue;p.challengeWeeks[key]={};for(const id of ['producto','objecion','estado'])p.challengeWeeks[key][id]={done:w[id]?.done===true,reflection:text(w[id]?.reflection,700)};}
  const campaign=sanitizeCampaign(raw.campaign);if(campaign)p.campaign=campaign;
+ p.opportunities=sanitizeOpportunities(raw.opportunities);
  return p;
 }
 function events(raw){if(!Array.isArray(raw))throw Error('El historial del respaldo no es válido.');return raw.slice(0,50000).filter(e=>object(e)&&typeof e.type==='string'&&Number.isFinite(Date.parse(e.at))).map(e=>{const out={};for(const k of ['id','at','type','item','scenario','difficulty','practice','mode','variant','stage','outcome'])if(typeof e[k]==='string')out[k]=text(e[k],120);if(Array.isArray(e.scores)&&e.scores.length===5&&e.scores.every(n=>Number.isFinite(n)&&n>=0&&n<=100))out.scores=[...e.scores];if(Number.isFinite(e.score)&&e.score>=0&&e.score<=100)out.score=e.score;return out;});}
