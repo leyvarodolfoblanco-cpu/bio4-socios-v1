@@ -1,5 +1,5 @@
 import {workspaceHome,externalToolsPage,scriptsPage,summaryPage,bindWorkspace,rememberWorkspace,quoteLink} from './workspace.js?v=20261030';
-import {businessPage,purchaseFaqPage} from './business-guide.js?v=medicamentos-20261030';
+import {businessPage,purchaseFaqPage} from './business-guide.js?v=medicamentos-nota-20261030';
 import {opportunityAttention,weeklyOpportunityReview} from './opportunity-insights.js?v=20261030';
 import {opportunitiesPage,bindOpportunities,sanitizeOpportunities} from './opportunities.js?v=workspace-20261030';
 import {testimonyInboxPreview,bindTestimonyPreview} from './testimony-inbox.js?v=20261029';
@@ -13,7 +13,7 @@ import {booksPage} from './books.js?v=20261028';
 import {myWeekPage,bindMyWeek} from './my-week.js?v=20261029';
 import {sequencePage,sequenceCompleted,sequenceSteps,bindSequence} from './sequence.js?v=20261028b';
 import {products} from './catalog.js?v=formula-hogar-20261007';
-import {objections,closings,lessons,scenarios,topics,difficulties,dimensions} from './content.js?v=medicamentos-20261030';
+import {objections,closings,lessons,scenarios,topics,difficulties,dimensions} from './content.js?v=medicamentos-nota-20261030';
 import {evaluate,prospectReply,roundCount,sampleExam,shouldFinish} from './engine.js?v=workspace-20261030';
 import {makeShareCopy,sharingEligibility,shareStages,summarizeShareResults} from './sharing.js?v=compartidos-20261012';
 import {productMedia} from './media.js?v=galeria-20260924';

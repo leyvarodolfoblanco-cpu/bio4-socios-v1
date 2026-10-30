@@ -7,7 +7,7 @@ export const objections=[
 {id:'consulto',title:'Lo consulto con mi pareja / familia',learn:'Respeta las decisiones compartidas. Ofrece información sencilla para ambos.',text:'Claro, es importante que lo platiquen con calma. ¿Te comparto un resumen con la presentación y el precio para que lo revisen juntos? Si surgen preguntas, con gusto las vemos.'},
 {id:'resultados',title:'¿Qué puedo esperar del producto?',learn:'Explica los beneficios y características de la ficha Bio4. Para una consulta que exceda el material, pregúntale a tu líder antes de responder.',text:'Te comparto sus beneficios, ingredientes y presentación para que conozcas bien lo que estás eligiendo. ¿Te muestro la ficha o te explico sus características principales?'},
 {id:'negocio',title:'¿Cuánto voy a ganar?',learn:'No inventes ingresos ni porcentajes. Usa el plan oficial vigente cuando esté disponible.',text:'En Bio4 puedes desarrollar la venta de productos y formar equipo. Revisemos el plan de Bio4 para conocer cómo se generan las comisiones y qué actividades necesitas realizar. ¿Quieres empezar por la venta o por el desarrollo de equipo?'},
-{id:'medicamentos',title:'¿Sustituye un medicamento?',learn:'Úsala cuando pregunten si un suplemento reemplaza medicamentos. Para revisar una combinación concreta con un tratamiento, consulta al médico o farmacéutico.',text:"Es un suplemento alimenticio, pero no suple un medicamento."}
+{id:'medicamentos',title:'¿Sustituye un medicamento?',learn:'Consulta con tu líder la información del producto. Para revisar una combinación con medicamentos o un cambio de tratamiento, consulta al médico o farmacéutico.',text:"Es un suplemento alimenticio, pero no suple tu medicamento."}
 
 ];
 export const closings=[
