@@ -9,6 +9,10 @@ export const objections=[
 {id:'negocio',title:'¿Cuánto voy a ganar?',learn:'No inventes ingresos ni porcentajes. Usa el plan oficial vigente cuando esté disponible.',text:'En Bio4 puedes desarrollar la venta de productos y formar equipo. Revisemos el plan de Bio4 para conocer cómo se generan las comisiones y qué actividades necesitas realizar. ¿Quieres empezar por la venta o por el desarrollo de equipo?'}
 ];
 export const closings=[
+{id:'pedido-claro',title:'Proponer el pedido con claridad',learn:'Cuando la persona conoce la presentación y el precio y muestra interés en comprar.',text:'Ya revisamos la presentación y el precio. ¿Confirmamos la cantidad y revisamos la entrega para preparar tu pedido?'},
+{id:'fecha-real',title:'Retomar en la fecha acordada',learn:'Utiliza únicamente una fecha que realmente acordaron; no inventes cortes ni escasez.',text:'Como acordamos, hoy retomamos la propuesta. ¿Quieres avanzar con el pedido o hay una duda que resolvamos primero?'},
+{id:'decidir-paso',title:'Pedir una decisión sobre el siguiente paso',learn:'Resume lo conversado y pregunta de forma directa, escuchando su respuesta.',text:'Con la información que revisamos, ¿qué prefieres hacer: avanzar con el pedido o resolver una duda más?'},
+
 {id:'permiso',title:'Pedir permiso para avanzar',learn:'Cuando la persona muestra interés y ya se resolvieron sus dudas.',text:'Con lo que revisamos, ¿te gustaría dar el siguiente paso o prefieres aclarar algo más? Cualquiera de las dos está bien.'},
 {id:'eleccion',title:'Elegir el siguiente paso',learn:'Ofrece dos opciones reales sin dar por hecho una compra.',text:'¿Qué te ayudaría más: revisar juntos la presentación o quedarte con el resumen para decidir con calma?'},
 {id:'confirmar',title:'Confirmar interés',learn:'Confirma qué quiere la persona antes de hablar de pedido.',text:'¿Esta opción se ajusta a lo que buscabas? Si te interesa, puedo confirmar contigo el total y las condiciones antes de hacer un pedido.'},

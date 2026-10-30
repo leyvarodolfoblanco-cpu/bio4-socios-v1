@@ -8,7 +8,8 @@ export function evaluate(responses,scenario=null){
  const scores=[coverage('need'),coverage('question'),coverage('value'),pressure?0:meaningful.length?Math.max(80,coverage('respect')):0,coverage('next')];
  const feedback=[scores[0]>=50?'Buscaste entender qué necesita la persona.':'Pregunta qué busca, qué le preocupa o cuál es su presupuesto.',scores[1]>=50?'Abriste espacio para que el prospecto responda.':'Incluye una pregunta abierta y espera su respuesta.',scores[2]>=50?'Usaste señales de información concreta. Revisa que cada dato sea correcto.':'Explica presentación, precio o información documentada con sencillez.',pressure?'Detectamos una frase de presión o promesa. Reformúlala y permite decidir con libertad.':scores[3]>=50?'Mantuviste un trato amable para continuar la conversación.':'Mantén un trato amable y escucha su decisión.',scores[4]>=50?'Propusiste avanzar o cerrar la conversación.':'Acuerda un siguiente paso con permiso, o respeta el cierre del tema.'];
  if(boundary){scores[0]=100;scores[1]=100;scores[2]=100;scores[4]=100;feedback[0]='Reconociste su necesidad de cerrar el tema.';feedback[1]='Ante un «no» explícito, no hace falta seguir preguntando.';feedback[2]='Una despedida clara es suficiente; no necesitas añadir argumentos de venta.';feedback[4]='Respetar el límite de la persona es un cierre válido.';}
- return {scores,total:Math.round(scores.reduce((a,b)=>a+b,0)/5),feedback,pressure};
+ const evidence=['need','question','value','respect','next'].map((key,i)=>{const index=sig.findIndex(s=>i===3&&pressure?s.pressure:s[key]);return index<0?'':meaningful[index].slice(0,220);});
+ return {scores,total:Math.round(scores.reduce((a,b)=>a+b,0)/5),feedback,pressure,evidence};
 }
 export function shouldFinish(s,difficulty,responses){const f=signals(responses.at(-1)||'');return responses.length>=roundCount(difficulty)||(['s29','s26'].includes(s.id)&&f.respect&&!f.pressure);}
 export function prospectReply(s,difficulty,responses){
