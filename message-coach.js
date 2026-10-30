@@ -27,11 +27,11 @@ export function reviewMessageDraft(raw,context){
       ?{kind:'review',title:'Presión',body:'Revisa expresiones de urgencia o compra obligada. Ofrece opciones y espacio para decidir.'}
       :{kind:'good',title:'Presión',body:'No aparecen las expresiones de presión más comunes que esta herramienta reconoce.'},
     strongClaim
-      ?{kind:'review',title:'Afirmaciones',body:'Encontré palabras que pueden prometer resultados médicos o garantizados. Comprueba la frase y su respaldo antes de usarla.'}
-      :{kind:'neutral',title:'Afirmaciones',body:'Esta revisión simple no verifica ingredientes, precios, beneficios ni cumplimiento. Compáralos con la ficha exacta.'}
-  ];
+      ?{kind:'review',title:'Afirmaciones',body:'Revisa esta frase con tu líder y utiliza la explicación del producto que aparece en su ficha Bio4.'}
+      :null
+  ].filter(Boolean);
   return {
-    intro:'Estas son señales del texto, no una calificación de venta ni una aprobación para enviarlo.',
+    intro:'Vamos a hacer tu mensaje más claro y fácil de responder.',
     checks,
     next:context==='acordado'
       ?'Ajusta el mensaje a lo que la persona pidió y a la fecha acordada. Si ya no desea seguir, detén el contacto.'
