@@ -1,5 +1,6 @@
 // Public educational summaries only; original documents stay outside this repository.
 export const purchaseQuestions=[
+ ['¿Un suplemento sustituye mis medicamentos?',"Es un suplemento alimenticio, pero no suple un medicamento."],
  ['¿Dónde puedo recibir mi pedido?','Bio4 cuenta con envíos por telemarketing a todo México. Consulta disponibilidad y condiciones para tu destino antes de confirmar el pedido.'],
  ['¿Cuánto cuesta el envío?','El envío por telemarketing tiene un cargo de $99 MXN, separado del precio del producto. Confirma la vigencia y las condiciones con quien atiende tu pedido antes de pagar.'],
  ['¿El precio que veo ya incluye entrega?','La ficha muestra el precio público de esa presentación. El envío se confirma por separado. Antes de pagar, pide el desglose de productos, envío y total.'],
