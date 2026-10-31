@@ -1,8 +1,8 @@
 import {dimensions} from './content.js?v=medicamentos-nota-20261030';
 import {weekDates,localDate} from './my-week.js?v=20261029';
-import {sequenceCompleted,sequenceSteps} from './sequence.js?v=revision-claude-20261030';
+import {sequenceCompleted,sequenceSteps} from './sequence.js?v=revision-gpt-confirmado-20261030';
 export const quoteUrl='https://bio4mx.com/cotizador-1/';
-export const bioGptVerified=false;
+export const bioGptVerified=true;
 export const bioGptUrl='https://chatgpt.com/g/g-67e3425fd8d08191a01123b0a304d04b-bio4-gpt-asistente-oficial-para-distribuidores';
 export const quoteLink=(label='Abrir cotizador Bio4 ↗')=>`<a class="btn secondary" href="${quoteUrl}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 const validRoute=r=>typeof r==='string'&&/^(productos|compartir|videos|secuencia|practicar|retos|historia|semana|campanas|oportunidades|guiones|cotizador|asistente-bio4)(\/[A-Za-z0-9_-]+)?(\/estado)?$/.test(r);
