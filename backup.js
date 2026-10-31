@@ -1,5 +1,5 @@
-import {sanitizeWorkspace} from './workspace.js?v=revision-gpt-confirmado-20261030';
-import {sanitizeOpportunities} from './opportunities.js?v=revision-gpt-confirmado-20261030';
+import {sanitizeWorkspace} from './workspace.js?v=revision3-20261030';
+import {sanitizeOpportunities} from './opportunities.js?v=revision3-20261030';
 import {sanitizeCampaign} from './campaigns.js?v=confianza-20261030';
 // Personal progress only. Imports create a separate profile, never replace one.
 const MAX_BYTES=8*1024*1024;

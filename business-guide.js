@@ -1,9 +1,9 @@
 // Public educational summaries only; original documents stay outside this repository.
 export const purchaseQuestions=[
- ['¿Dónde puedo recibir mi pedido?','Bio4 cuenta con envíos por telemarketing a todo México. Consulta disponibilidad y condiciones para tu destino antes de confirmar el pedido.'],
- ['¿Cuánto cuesta el envío?','El envío por telemarketing tiene un cargo de $99 MXN, separado del precio del producto. Confirma la vigencia y las condiciones con quien atiende tu pedido antes de pagar.'],
- ['¿El precio que veo ya incluye entrega?','La ficha muestra el precio público de esa presentación. El envío se confirma por separado. Antes de pagar, pide el desglose de productos, envío y total.'],
- ['¿Cuándo llega y hay existencias hoy?','La disponibilidad y la fecha estimada de entrega se confirman al preparar el pedido. Consultar una ficha no reserva existencias ni garantiza entrega inmediata.'],
+ ['¿Dónde puedo recibir mi pedido?','Bio4 cuenta con envíos por telemarketing a todo México. Te confirmo disponibilidad y entrega para tu destino al preparar tu pedido.'],
+ ['¿Cuánto cuesta el envío?','El envío por telemarketing cuesta $99 MXN. Puede ser sin cargo desde $3,100 MXN, según las condiciones del pedido. Te comparto el total al preparar tu compra.'],
+ ['¿El precio que veo ya incluye entrega?','La ficha muestra el precio público del producto. Te comparto el desglose de productos, envío y total para tu pedido.'],
+ ['¿Cuándo llega y hay existencias hoy?','Te confirmo existencias y fecha estimada de entrega al preparar tu pedido.'],
  ['¿Cómo puedo pagar o solicitar factura?','Te confirmo las opciones de pago y los datos para tu factura al preparar tu pedido.','Consulta los medios de pago y requisitos de facturación con el canal que tramita el pedido. No agregues condiciones que aún no te hayan indicado.'],
  ['¿Cómo elijo la presentación?','Revisa nombre, contenido, ingredientes y precio de la ficha. Si buscas una característica específica, pregunta por ella antes de elegir. Las indicaciones de uso corresponden a la etiqueta de cada presentación.'],
  ['¿Qué hago si falta algo o necesito una aclaración?','Conserva tu comprobante y número de pedido. Con esos datos podemos consultar la aclaración con el canal que atendió tu compra.','Consulta el procedimiento, los plazos y las condiciones de aclaración antes de ofrecer una solución.'],

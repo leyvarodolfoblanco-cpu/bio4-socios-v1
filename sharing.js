@@ -328,4 +328,4 @@ export function summarizeShareResults(events,productId,now=Date.now()) {
   return result;
 }
 
-export function makeShareCopy(p,stage='interes',variant='A'){const text=enrichedShareCopy(p,stage,variant);return stage==='precio'&&sharingEligibility(p).enabled?text+'\n🚚 Envío por telemarketing: $99 MXN. Revisa en el cotizador cuándo aplica envío sin cargo: https://bio4mx.com/cotizador-1/':text;}
+export function makeShareCopy(p,stage='interes',variant='A'){if(stage==='precio'&&sharingEligibility(p).enabled){const price=p.price===null?'Precio público por confirmar':new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(p.price)+' MXN';return `📦 ${p.name} · ${p.presentation}\n💰 ${price} + envío $99 MXN por telemarketing.\n🚚 Envío sin cargo desde $3,100 MXN, sujeto a las condiciones del pedido.\n\n💬 ${variant==='B'?'¿Revisamos el total y la entrega para tu pedido?':'¿Te confirmo existencias, total y fecha de entrega?'}`;}return enrichedShareCopy(p,stage,variant);}

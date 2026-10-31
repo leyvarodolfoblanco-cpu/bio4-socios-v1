@@ -1,4 +1,4 @@
-import {bioGptVerified} from './workspace.js?v=revision-gpt-confirmado-20261030';
+import {bioGptVerified} from './workspace.js?v=revision3-20261030';
 import {testimonyFormPreview} from './testimony-inbox.js?v=20261029';
 export const toolGroups=[['primeros','Comienza aquí','✦'],['aprender','Aprende y capacítate','▶'],['accion','Plan en acción','➜'],['productos','Productos','▦'],['herramientas','Herramientas','◇'],['equipo','Equipo y negocio','↗'],['testimonios','Testimonios','☏']];
 export const directoryTools=[
