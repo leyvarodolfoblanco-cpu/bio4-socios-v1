@@ -225,7 +225,7 @@ export function sharingEligibility(p) {
   if (p?.id && reviewedDrafts[p.id]) return {enabled:true,reason:'Borrador informativo para socios. No acredita que el producto ni la actividad de la cuenta estén permitidos en WhatsApp Business. Confirma las reglas aplicables antes de publicar o enviar.'};
   return {enabled:false,reason:'No hay texto preparado para este producto. Consulta su ficha antes de compartir.'};
 }
-function baseShareCopy(p,stage='interes',variant='A') {
+function enrichedShareCopy(p,stage='interes',variant='A') {
   if (!sharingEligibility(p).enabled) return '';
   if (reviewedDrafts[p.id]?.[stage]?.[variant]) return reviewedDrafts[p.id][stage][variant];
   const profile=shareProfiles[p.id];
@@ -283,7 +283,7 @@ function purposeShareCopy(p,stage,variant){
   }
   return '';
 }
-export function makeShareCopy(p,stage='interes',variant='A') {
+function baseShareCopy(p,stage='interes',variant='A') {
   if(stage==='catalogo'&&sharingEligibility(p).enabled){
     const description=productDescription(p);
     if(description){
@@ -327,3 +327,5 @@ export function summarizeShareResults(events,productId,now=Date.now()) {
   for(const e of events){const at=Date.parse(e.at);if(e.type==='share_outcome'&&e.item===productId&&at>=now-7*86400000&&at<=now&&result[e.variant]&&Object.hasOwn(result[e.variant],e.outcome))result[e.variant][e.outcome]++;}
   return result;
 }
+
+export function makeShareCopy(p,stage='interes',variant='A'){const text=enrichedShareCopy(p,stage,variant);return stage==='precio'&&sharingEligibility(p).enabled?text+'\n🚚 Envío por telemarketing: $99 MXN. Revisa en el cotizador cuándo aplica envío sin cargo: https://bio4mx.com/cotizador-1/':text;}

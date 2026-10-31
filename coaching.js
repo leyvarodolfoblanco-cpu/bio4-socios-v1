@@ -25,6 +25,7 @@ export function practiceGoal(scenario){
 }
 
 export function nextPracticeStep(result,scenario){
+  if(result.findings?.length){const first=result.findings.find(f=>f.severity==='critical')||result.findings[0];return {action:first.advice,example:first.example};}
   if(result.pressure)return {action:'Reformula cualquier urgencia, promesa o presión antes de intentar de nuevo.',example:'«Puedes revisar la información con calma; no tienes que decidir ahora.»'};
   if(['s26','s29'].includes(scenario.id))return result.scores[3]>=50
     ?{action:'Ensaya otra forma breve de respetar el cierre, sin volver a vender.',example:'«Gracias por decirme. Respeto tu decisión y dejamos el tema aquí.»'}

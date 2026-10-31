@@ -38,3 +38,5 @@
 .sidebar nav a[href='#/mas/aprender']{--category-ink:#914117;--category-soft:#fff0df}
 .sidebar nav a[href='#/mas/equipo']{--category-ink:#855611;--category-soft:#fff3cb}
 .sidebar nav a[href='#/mas/testimonios']{--category-ink:#86405d;--category-soft:#fbeaf1}
+
+[data-tool-group=accion]{--group-ink:#155d83!important;--group-soft:#e6f2fc!important}.sidebar nav a[href='#/mas/accion']{--category-ink:#155d83;--category-soft:#e6f2fc}

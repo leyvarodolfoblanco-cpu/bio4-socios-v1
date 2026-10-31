@@ -1,6 +1,6 @@
 // Adaptación educativa propia. El manual original no se publica en el repositorio.
 export const sequenceSteps=[
-  ['Proyección','Mi propósito','Define qué quieres construir y para qué. Elige una primera meta que dependa de tus acciones.','Escribí mi propósito, una meta y el tiempo que puedo dedicar.','plan','Organizar mi semana'],
+  ['Proyección','Mi propósito','Define qué quieres construir y para qué. Elige una primera meta que dependa de tus acciones.','Escribí mi propósito, una meta y el tiempo que puedo dedicar.','plan','Llevarlo al Plan en acción'],
   ['Planeación','Conozco mis productos','Revisa presentación, ingredientes, precio y uso. Prueba poco a poco la mayor variedad de productos que sea adecuada para ti y según tus posibilidades; no es requisito comprarlos todos para comenzar. Usa los de uso externo según su etiqueta.','Revisé una ficha y distinguí sus datos de mi experiencia personal.','productos','Conocer productos'],
   ['Planeación','Abro una conversación','Escucha y conversa con interés sincero. No necesitas presentar todo de golpe: empieza por comprender qué le interesa a la persona.','Practiqué un abridor y escuché antes de ofrecer información.','guias','Practicar cómo conversar'],
   ['Acción','Hago una invitación clara','Elige producto, negocio o presentación del plan. Explica brevemente el motivo y permite que la persona decida.','Adapté una invitación al interés de la persona y al canal.','videos','Ver capacitación'],

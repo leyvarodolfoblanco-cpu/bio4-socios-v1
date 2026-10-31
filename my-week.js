@@ -1,4 +1,4 @@
-import {sequenceSteps,sequenceCompleted} from './sequence.js?v=20261028b';
+import {sequenceSteps,sequenceCompleted} from './sequence.js?v=revision-claude-20261030';
 export function localDate(d=new Date()){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
 export function weekDates(now=new Date()) {const monday=new Date(now.getFullYear(),now.getMonth(),now.getDate());monday.setDate(monday.getDate()-((monday.getDay()+6)%7));const end=new Date(monday);end.setDate(end.getDate()+6);return {key:localDate(monday),end:localDate(end)};}
 export function nextSequence(u){const done=sequenceCompleted(u);return sequenceSteps.findIndex((_,i)=>!done.has(i));}
